@@ -1,0 +1,35 @@
+/* Banner principal */
+.main-banner {
+    height: calc(100vh - 100px);
+    background-image: url('/main-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 3.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título del banner principal */
+.title-main-banner {
+    width: 40%;
+    letter-spacing: 3%;
+    line-height: 130%;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón del banner principal */
+.button-main-banner {
+    width: 9rem;
+    text-transform: none;
+    border: 2px solid #0184EF;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    transition: background-color .3s, color .3s;
+}
+
+.button-main-banner:hover {
+    background-color: #0184EF;
+    border: 2px solid black;
+}

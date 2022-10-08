@@ -44,7 +44,7 @@ export const Navbar: FC = () => {
             <NextLink href='/contact' passHref>
               <Link underline='none'>
                 <Button variant="contained" color='secondary' className={ styles['button-navbar'] }>
-                  <Typography variant="h5" color="info" textTransform='capitalize'>Contáctanos</Typography>
+                  <Typography variant="h5" color="info.main" textTransform='capitalize'>Contáctanos</Typography>
                 </Button>              
               </Link>
             </NextLink>  

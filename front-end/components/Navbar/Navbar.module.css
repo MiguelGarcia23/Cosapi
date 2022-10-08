@@ -9,6 +9,7 @@
     padding: 0 40px;
     background: linear-gradient(#696A6C, #FFFFFF, #696A6C);
     position: fixed;
+    top: 0;
 }
 
 /* Container con los links */

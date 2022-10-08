@@ -14,6 +14,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
         <>
             <Head>
                 <title>{ title || 'Cosapi'}</title>
+                <link rel="shortcut icon" href="/logo.svg" />
                 <meta name='author' content='Miguel García' />
                 <meta name='description' content={`Información sobre el pokemon ${ title }`} />
                 <meta name='keywords' content={`cosapi, venezuela, pdvsa, ${ title }`} />
@@ -26,7 +27,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
             <Navbar />
     
             <main style={{
-              padding: '100px 20px'
+              marginTop: '100px'
             }}>
                 { children }
             </main>
