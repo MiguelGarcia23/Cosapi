@@ -26,4 +26,34 @@ export const lightTheme = createTheme({
             main: lightGreen[500]
         }
     },
+    typography: {
+        h1: {
+            fontSize: '3.75rem',
+            fontWeight: 900
+        },
+        h2: {
+            fontSize: '2.5rem',
+            fontWeight: 900
+        },
+        h3: {
+            fontSize: '2.125rem',
+            fontWeight: 700
+        },
+        h4: {
+            fontSize: '1.5rem',
+            fontWeight: 700
+        },
+        h5: {
+            fontSize: '1.25rem',
+            fontWeight: 700
+        },
+        body1: {
+            fontSize: '1rem',
+            fontWeight: 400
+        },
+        body2: {
+            fontSize: '1.125rem',
+            fontWeight: 400
+        }
+    }
 })

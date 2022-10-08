@@ -1,0 +1,38 @@
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: linear-gradient(#696A6C, #FFFFFF, #696A6C);
+    position: fixed;
+}
+
+/* Container con los links */
+.links-navbar {
+    width: 40%;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links del navbar */
+.link-navbar {
+    text-decoration: none;
+    transition: opacity .5s;
+}
+
+.link-navbar:hover {
+    opacity: 0.5;
+}
+
+/* Botón del Navbar */
+.button-navbar {
+    padding: 10px 20px;
+    border-radius: 8px;
+}
