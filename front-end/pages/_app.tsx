@@ -2,6 +2,10 @@ import { useState } from 'react';
 import type { AppProps } from 'next/app';
 
 import { CssBaseline, FormControlLabel, FormGroup, Switch, ThemeProvider } from '@mui/material';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 import { lightTheme, darkTheme } from '../themes';
 
@@ -18,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={ selectedTheme }>
       <CssBaseline />
       <FormGroup>
-        <FormControlLabel control={<Switch onChange={() => setMode(mode === "light" ? "dark" : "light")} />} label="Dark Mode" />
+        <FormControlLabel control={<Switch onChange={() => setMode(mode === "light" ? "dark" : "light")} />} label={mode === "light" ? "Light Mode" : "Dark Mode"} />
       </FormGroup>
       <Component {...pageProps} />
     </ThemeProvider>
