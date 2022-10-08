@@ -1,16 +1,20 @@
 import type { NextPage } from 'next';
 
+import { Box } from '@mui/material';
+
 import { Layout } from '../components/layouts';
-import { MainBanner } from '../components/home';
+import { MainBanner, Welcome } from '../components/home';
 
 const HomePage: NextPage = () => {
   return (
     <Layout>
-      <main>
+      <Box>
 
         <MainBanner />
 
-      </main>
+        <Welcome />
+
+      </Box>
     </Layout>
   )
 }

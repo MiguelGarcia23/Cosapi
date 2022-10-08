@@ -1,15 +1,16 @@
 /* Navbar */
 .navbar {
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     background: linear-gradient(#696A6C, #FFFFFF, #696A6C);
     position: fixed;
     top: 0;
+    z-index: 99;
 }
 
 /* Container con los links */
@@ -34,6 +35,6 @@
 
 /* Botón del Navbar */
 .button-navbar {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border-radius: 8px;
 }

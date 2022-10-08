@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import Head from 'next/head';
 
-import { Navbar } from '../Navbar';
+import { Navbar } from '../navbar';
 
 interface Props {
     children: JSX.Element,
@@ -27,7 +27,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
             <Navbar />
     
             <main style={{
-              marginTop: '100px'
+              marginTop: '6.25rem'
             }}>
                 { children }
             </main>

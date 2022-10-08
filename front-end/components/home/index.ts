@@ -1,1 +1,2 @@
-export * from './MainBanner';
+export * from './mainBanner/MainBanner';
+export * from './welcome/Welcome';
