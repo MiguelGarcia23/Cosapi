@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { Box } from '@mui/material';
 
 import { Layout } from '../components/layouts';
-import { MainBanner, Welcome } from '../components/home';
+import { MainBanner, MainServices, Welcome } from '../components/home';
 
 const HomePage: NextPage = () => {
   return (
@@ -13,6 +13,8 @@ const HomePage: NextPage = () => {
         <MainBanner />
 
         <Welcome />
+
+        <MainServices />
 
       </Box>
     </Layout>
