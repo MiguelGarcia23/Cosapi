@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Button, Card, CardActionArea, CardMedia, CardContent, Grid, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardMedia, CardContent, Grid, Typography } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
 
 import styles from './MainServices.module.css'
@@ -32,10 +32,10 @@ export const CardMainServices: FC<Props> = ({ img, alt, subtitle, title }) => {
                         <Typography gutterBottom variant='h3' component='div'>
                             { title }
                         </Typography>
-                        <Button size='small' className={ styles['main-services-see-more-button']}>
+                        <Box className={ styles['main-services-see-more']}>
                             <Typography variant='body2' fontWeight={ 700 } color='secondary' sx={{ marginRight: '0.375rem' }}>Ver más</Typography>
                             <EastIcon fontSize='small' color='secondary' />                        
-                        </Button>
+                        </Box>
                     </CardContent>
                 </CardActionArea>
             </Card>

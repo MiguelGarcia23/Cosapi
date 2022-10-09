@@ -14,6 +14,9 @@
 }
 
 /* Botón de ver más */
-.main-services-see-more-button {
+.main-services-see-more {
     text-transform: none;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
