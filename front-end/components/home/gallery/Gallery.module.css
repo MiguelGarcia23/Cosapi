@@ -1,0 +1,45 @@
+/* Galería de proyectos */
+.gallery-home {
+    padding: 2.5rem 3.75rem;
+}
+
+/* Título de galería */
+.gallery-home-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Cada proyecto de la galería */
+.gallery-home-project{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Info de cada proyecto de la galería */
+.gallery-home-project-info {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+/* Botón de Ver más de la galería */
+.gallery-home-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    width: 19.125rem;
+    text-transform: none;
+    border: 2px solid #0184EF;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    transition: background-color .3s, border .3s, color .3s;
+}
+
+.gallery-home-button:hover {
+    background-color: #0184EF;
+    border: 2px solid white;
+}
+
+.gallery-home-button:hover h5 {
+    color: white;
+}

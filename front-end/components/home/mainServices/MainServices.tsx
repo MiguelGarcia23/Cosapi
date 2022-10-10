@@ -4,7 +4,7 @@ import { Box, Grid, Typography } from '@mui/material';
 
 import { CardMainServices } from './CardMainServices';
 
-import styles from './MainServices.module.css'
+import styles from './MainServices.module.css';
 
 export const MainServices: FC = () => {
 
