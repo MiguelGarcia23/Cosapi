@@ -14,6 +14,7 @@ const CssTextField = styled(TextField)({
     },
     '& .MuiFilledInput-root': {
         backgroundColor: 'white',
+        borderRadius: '8px',
         '&:hover': {
             backgroundColor: 'white'
         },
