@@ -2,10 +2,12 @@ import { FC } from 'react';
 
 import NextLink from 'next/link';
 
-import { Box, Grid, Link, Typography } from '@mui/material';
+import { Box, Grid, Link } from '@mui/material';
+import { Email, LocationOn, PhoneInTalk } from '@mui/icons-material';
+
+import { ItemFooter } from './ItemFooter';
 
 import styles from './Footer.module.css';
-import { Email, LocationOn, PhoneInTalk } from '@mui/icons-material';
 
 export const Footer: FC = () => {
 
@@ -15,65 +17,65 @@ export const Footer: FC = () => {
 
             <Grid container spacing={ 10 }>
 
-                <Grid item sm={ 12 } md={ 6 } lg={ 3 }>
-                  
-                    <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Nuestros servicios</Typography>
+                <ItemFooter title='Nuestros servicios' large={ 3 }>
 
-                    <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diagnóstico</Link>
-                    </NextLink>
-                    <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diseño</Link>
-                    </NextLink>
-                    <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Ejecución</Link>
-                    </NextLink>
-
-                </Grid>
-
-                <Grid item sm={ 12 } md={ 6 } lg={ 3 }>
-                  
-                    <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Empresa</Typography>
-
-                    <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Proyectos</Link>
-                    </NextLink>
-                    <NextLink href='/' passHref>
-                    <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Sobre Nosotros</Link>
-                    </NextLink>
-
-                </Grid>
-
-                <Grid item sm={ 12 } md={ 6 } lg={ 4 }>
-                  
-                    <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Contacto</Typography>
-
-                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
-                        <PhoneInTalk color='info' sx={{ marginRight: '0.625rem'}} />
+                    <>
                         <NextLink href='/' passHref>
-                            <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                +584161234567
-                            </Link>
+                            <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diagnóstico</Link>
                         </NextLink>
-                    </Box>
-                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
-                        <Email color='info' sx={{ marginRight: '0.625rem'}} />
                         <NextLink href='/' passHref>
-                            <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                cosapi@gmail.com
-                            </Link>
+                            <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diseño</Link>
                         </NextLink>
-                    </Box>
-                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
-                        <LocationOn color='info' sx={{ marginRight: '0.625rem'}} />
                         <NextLink href='/' passHref>
-                            <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                Centro Empresarial Tecno Acero de Venezuela, Maturin-Estado Monagas
-                            </Link>
+                            <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Ejecución</Link>
                         </NextLink>
-                    </Box>
+                    </>
 
-                </Grid>
+                </ItemFooter>
+
+                <ItemFooter title='Empresa' large={ 3 }>
+
+                    <>
+                        <NextLink href='/' passHref>
+                            <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Proyectos</Link>
+                        </NextLink>
+                        <NextLink href='/' passHref>
+                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Sobre Nosotros</Link>
+                        </NextLink>
+                    </>
+
+                </ItemFooter>
+
+                <ItemFooter title='Contacto' large={ 4 }>
+
+                    <>
+                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                            <PhoneInTalk color='info' sx={{ marginRight: '0.625rem'}} />
+                            <NextLink href='/' passHref>
+                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
+                                    +584161234567
+                                </Link>
+                            </NextLink>
+                        </Box>
+                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                            <Email color='info' sx={{ marginRight: '0.625rem'}} />
+                            <NextLink href='/' passHref>
+                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
+                                    cosapi@gmail.com
+                                </Link>
+                            </NextLink>
+                        </Box>
+                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                            <LocationOn color='info' sx={{ marginRight: '0.625rem'}} />
+                            <NextLink href='/' passHref>
+                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
+                                    Centro Empresarial Tecno Acero de Venezuela, Maturin-Estado Monagas
+                                </Link>
+                            </NextLink>
+                        </Box>
+                    </>
+
+                </ItemFooter>
               
             </Grid>
 
