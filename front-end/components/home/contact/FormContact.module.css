@@ -1,13 +1,19 @@
 /* Formulario de contacto */
 .form-contact-home {
     background-color: #2E2E2F;
-    padding: 2.5rem 8.75rem;
+    padding: 2.5rem;
 }
 
 /* Título del formulario */
 .form-contact-home-title {
     text-align: center;
     margin-bottom: 2.5rem;
+}
+
+/* Caja del botón del formulario */
+.form-contact-home-button-box {
+    display: flex;
+    justify-content: center;
 }
 
 /* Botón del formulario */
@@ -18,4 +24,20 @@
     font-size: 1.25rem;
     font-weight: 900;
     padding: 0.5rem 0;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Formulario de contacto */
+    .form-contact-home {
+        padding: 2.5rem 8.75rem;
+    }
+
+    /* Caja del botón del formulario */
+    .form-contact-home-button-box {
+        justify-content: flex-end;
+    }
 }

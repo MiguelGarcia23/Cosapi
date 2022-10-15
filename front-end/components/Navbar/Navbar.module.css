@@ -58,17 +58,23 @@
 
 /* Media queries versión Desktop */
 @media (min-width: 1050px){
+
+    /* Navbar versión mobile */
+    .navbar-mobile {
+        display: none;
+    }
+
+    /* Navbar versión desktop */
     .navbar-desktop {
         display: flex;
     }
 
-    .navbar-mobile {
-        display: none;
-    }
 }
 
 /* Media queries versión Desktop grande */
 @media (min-width: 1300px) {
+
+    /* Container con los links */
     .links-navbar {
         width: 40%;
     }

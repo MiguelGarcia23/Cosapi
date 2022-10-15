@@ -10,11 +10,11 @@ export const WelcomeHeader: FC = () => {
 
     <Box className={ styles['welcome-header'] }>
 
-        <Typography variant="h2" color="info.dark" className={ styles['welcome-title'] }>
+        <Typography variant='h2' color='info.dark' className={ styles['welcome-title'] }>
           Bienvenido a Cosapi
         </Typography>
 
-        <Typography variant="h4" color="info.dark" className={ styles['welcome-paragraph'] }>
+        <Typography variant='h4' color='info.dark' className={ styles['welcome-paragraph'] }>
           Somos una empresa multidisciplinaria dedicada a la prestación de servicios integrales y al suministro de productos de vanguardia para el desarrollo y ejecución de proyectos en la industria petrolera y petroquímica, enérgica, minera y mucho más
         </Typography>
         

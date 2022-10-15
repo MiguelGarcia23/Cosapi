@@ -22,7 +22,6 @@ export const CardGallery: FC<Props> = ({ img, alt, year, title }) => {
 
                     <CardMedia
                         component='img'
-                        height='500px'
                         image={ img }
                         alt={ alt }
                     />

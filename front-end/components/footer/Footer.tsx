@@ -20,13 +20,13 @@ export const Footer: FC = () => {
                     <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Nuestros servicios</Typography>
 
                     <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-item'] }>Diagnóstico</Link>
+                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diagnóstico</Link>
                     </NextLink>
                     <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-item'] }>Diseño</Link>
+                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diseño</Link>
                     </NextLink>
                     <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-item'] }>Ejecución</Link>
+                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Ejecución</Link>
                     </NextLink>
 
                 </Grid>
@@ -36,10 +36,10 @@ export const Footer: FC = () => {
                     <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Empresa</Typography>
 
                     <NextLink href='/' passHref>
-                        <Link variant='body2' color='info.main' className={ styles['footer-item'] }>Proyectos</Link>
+                        <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Proyectos</Link>
                     </NextLink>
                     <NextLink href='/' passHref>
-                    <Link variant='body2' color='info.main' className={ styles['footer-item'] }>Sobre Nosotros</Link>
+                    <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Sobre Nosotros</Link>
                     </NextLink>
 
                 </Grid>
@@ -48,7 +48,7 @@ export const Footer: FC = () => {
                   
                     <Typography variant='h4' color='info.main' className={ styles['footer-title'] }>Contacto</Typography>
 
-                    <Box className={ styles['footer-item'] } sx={{ display: 'flex' }}>
+                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
                         <PhoneInTalk color='info' sx={{ marginRight: '0.625rem'}} />
                         <NextLink href='/' passHref>
                             <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
@@ -56,7 +56,7 @@ export const Footer: FC = () => {
                             </Link>
                         </NextLink>
                     </Box>
-                    <Box className={ styles['footer-item'] } sx={{ display: 'flex' }}>
+                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
                         <Email color='info' sx={{ marginRight: '0.625rem'}} />
                         <NextLink href='/' passHref>
                             <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
@@ -64,7 +64,7 @@ export const Footer: FC = () => {
                             </Link>
                         </NextLink>
                     </Box>
-                    <Box className={ styles['footer-item'] } sx={{ display: 'flex' }}>
+                    <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
                         <LocationOn color='info' sx={{ marginRight: '0.625rem'}} />
                         <NextLink href='/' passHref>
                             <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>

@@ -1,6 +1,6 @@
 /* Galería de proyectos */
 .gallery-home {
-    padding: 2.5rem 3.75rem;
+    padding: 2.5rem;
 }
 
 /* Título de galería */
@@ -11,15 +11,15 @@
 
 /* Cada proyecto de la galería */
 .gallery-home-project{
-    max-width: 640px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
 /* Info de cada proyecto de la galería */
 .gallery-home-project-info {
     position: absolute;
-    bottom: 40px;
-    left: 20px;
+    bottom: 16px;
+    left: 14px;
 }
 
 /* Botón de Ver más de la galería */
@@ -42,4 +42,26 @@
 
 .gallery-home-button:hover h5 {
     color: white;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Galería de proyectos */
+    .gallery-home {
+        padding: 2.5rem 3.75rem;
+    }
+
+    /* Cada proyecto de la galería */
+    .gallery-home-project{
+        max-width: 640px;
+    }
+
+    /* Info de cada proyecto de la galería */
+    .gallery-home-project-info {
+        bottom: 40px;
+        left: 20px;
+    }
 }

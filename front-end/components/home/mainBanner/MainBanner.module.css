@@ -1,11 +1,11 @@
 /* Banner principal */
 .main-banner {
-    height: calc(100vh - 100px);
+    height: 50vh;
     background-image: url('/main-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0 3.75rem;
+    padding: 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,8 @@
 
 /* Título del banner principal */
 .title-main-banner {
-    width: 40%;
+    font-size: 1.75rem;
+    width: 70%;
     letter-spacing: 3%;
     line-height: 130%;
     margin-bottom: 1.5rem;
@@ -32,4 +33,37 @@
 .button-main-banner:hover {
     background-color: #0184EF;
     border: 2px solid black;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Banner principal */
+    .main-banner {
+        height: 70vh;
+        padding: 0 3.75rem;
+    }
+
+    /* Título del banner principal */
+    .title-main-banner {
+        font-size: 2.5rem;
+        width: 60%;
+    }
+}
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Banner principal */
+    .main-banner {
+        height: calc(100vh - 100px);
+    }
+
+    /* Título del banner principal */
+    .title-main-banner {
+        font-size: 3.75rem;
+        width: 50%;
+    }
 }

@@ -66,7 +66,7 @@ export const FormContact: FC = () => {
                   
                 </Grid>
 
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end'}}>
+                <Box className={ styles['form-contact-home-button-box'] }>
                     <Button variant='contained' color='secondary' className={ styles['form-contact-home-button'] }>
                         Enviar
                     </Button>

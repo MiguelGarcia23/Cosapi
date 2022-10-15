@@ -5,11 +5,13 @@ import { Box } from '@mui/material';
 import { WelcomeHeader } from './WelcomeHeader';
 import { WelcomeInfo } from './WelcomeInfo';
 
+import styles from './Welcome.module.css';
+
 export const Welcome: FC = () => {
 
     return (
 
-        <Box sx={{ padding: '0px 3.75rem', margin: '5rem 0 4rem 0'}}>
+        <Box className={ styles['welcome-section'] }>
 
             <WelcomeHeader />
 
