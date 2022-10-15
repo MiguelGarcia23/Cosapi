@@ -11,7 +11,7 @@ export const Gallery: FC = () => {
 
         <Box className={ styles['gallery-home'] }>
 
-            <Typography variant='h2' color='info.dark' className={ styles['gallery-home-title'] }>Galería de proyectos</Typography>
+            <Typography variant='h2' color='info.dark'>Galería de proyectos</Typography>
 
             <Grid container spacing={ 2 }>
 

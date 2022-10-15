@@ -3,7 +3,7 @@ import { FC } from 'react';
 import NextLink from 'next/link';
 import Image from 'next/image';
 
-import { Button, Container, Link, Typography } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
 
 import styles from './Navbar.module.css';
 
@@ -13,7 +13,7 @@ export const NavbarDesktop: FC = () => {
 
         <nav className={ styles['navbar-desktop'] }>
 
-          <Container sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1 }}>
             <NextLink href='/' passHref>
               <Link>
                 <Image 
@@ -24,31 +24,31 @@ export const NavbarDesktop: FC = () => {
                 />
               </Link>
             </NextLink>
-          </Container>
+          </Box>
 
-          <Container className={ styles['links-navbar'] }>
+          <Box className={ styles['links-navbar'] }>
 
             <NextLink href='/services' passHref>
-              <Link variant='h5' color='info.dark' className={ styles['link-navbar'] }>Servicios</Link>
+              <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Servicios</Link>
             </NextLink>
 
             <NextLink href='/projects' passHref>
-              <Link variant='h5' color='info.dark' className={ styles['link-navbar'] }>Proyectos</Link>
+              <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Proyectos</Link>
             </NextLink>
 
             <NextLink href='/aboutUs' passHref>
-              <Link variant='h5' color='info.dark' className={ styles['link-navbar'] }>Nosotros</Link>
+              <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Nosotros</Link>
             </NextLink>
 
             <NextLink href='/contact' passHref>
               <Link underline='none'>
-                <Button variant="contained" color='secondary' className={ styles['button-navbar'] }>
+                <Button variant="contained" color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }}>
                   <Typography variant="h5" color="info.main" textTransform='capitalize'>Contáctanos</Typography>
                 </Button>              
               </Link>
             </NextLink>  
 
-          </Container>
+          </Box>
 
         </nav>
     )

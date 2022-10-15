@@ -12,7 +12,7 @@ export const MainServices: FC = () => {
         
         <Box className={ styles['main-services'] }>
 
-            <Typography variant='h2' color='info.main' className={ styles['main-services-title'] }>Nuestros servicios populares</Typography>
+            <Typography variant='h2' color='info.main'>Nuestros servicios populares</Typography>
         
             <Grid container spacing={ 2 } sx={{ justifyContent: 'center' }}>
 

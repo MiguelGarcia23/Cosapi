@@ -13,26 +13,27 @@
 
 /* Título del banner principal */
 .title-main-banner {
-    font-size: 1.75rem;
-    width: 70%;
-    letter-spacing: 3%;
-    line-height: 130%;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem !important;
+    width: 70% !important;
+    letter-spacing: 3% !important;
+    line-height: 130% !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
 }
 
 /* Botón del banner principal */
 .button-main-banner {
-    width: 9rem;
-    text-transform: none;
-    border: 2px solid #0184EF;
-    border-radius: 8px;
-    padding: 0.5rem 0;
-    transition: background-color .3s, border .3s;
+    width: 9rem !important;
+    text-transform: none !important;
+    border: 2px solid #0184EF !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 0 !important;
+    transition: background-color .3s, border .3s !important;
 }
 
 .button-main-banner:hover {
-    background-color: #0184EF;
-    border: 2px solid black;
+    background-color: #0184EF !important;
+    border: 2px solid black !important;
 }
 
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
@@ -48,8 +49,8 @@
 
     /* Título del banner principal */
     .title-main-banner {
-        font-size: 2.5rem;
-        width: 60%;
+        font-size: 2.5rem !important;
+        width: 60% !important;
     }
 }
 
@@ -63,7 +64,7 @@
 
     /* Título del banner principal */
     .title-main-banner {
-        font-size: 3.75rem;
-        width: 50%;
+        font-size: 3.75rem !important;
+        width: 50% !important;
     }
 }

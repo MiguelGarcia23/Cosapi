@@ -30,7 +30,7 @@ export const FormContact: FC = () => {
         
         <Box className={ styles['form-contact-home'] }>
 
-            <Typography variant='h2' color='info.main' className={ styles['form-contact-home-title'] }>
+            <Typography variant='h2' color='info.main' sx={{ marginBottom: '2.5rem' }}>
                 ¿Te gustaría contactarnos?
             </Typography>
 

@@ -40,18 +40,14 @@
 
 /* Links del navbar */
 .link-navbar {
+    font-size: 1.25rem;
+    font-weight: 700;
     text-decoration: none;
     transition: opacity .5s;
 }
 
 .link-navbar:hover {
     opacity: 0.5;
-}
-
-/* Botón del Navbar */
-.button-navbar {
-    padding: 0.625rem 1.25rem;
-    border-radius: 8px;
 }
 
 /* -------------------------------- MEDIA QUERIES ------------------------------- */

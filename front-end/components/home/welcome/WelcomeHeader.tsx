@@ -10,7 +10,7 @@ export const WelcomeHeader: FC = () => {
 
     <Box className={ styles['welcome-header'] }>
 
-        <Typography variant='h2' color='info.dark' className={ styles['welcome-title'] }>
+        <Typography variant='h2' color='info.dark' sx={{ marginBottom: '1rem' }}>
           Bienvenido a Cosapi
         </Typography>
 

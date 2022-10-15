@@ -4,12 +4,6 @@
     padding: 2.5rem;
 }
 
-/* Título del formulario */
-.form-contact-home-title {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
 /* Caja del botón del formulario */
 .form-contact-home-button-box {
     display: flex;
@@ -18,12 +12,12 @@
 
 /* Botón del formulario */
 .form-contact-home-button {
-    width: 10rem;
-    text-transform: none;
-    border-radius: 8px;
-    font-size: 1.25rem;
-    font-weight: 900;
-    padding: 0.5rem 0;
+    width: 10rem !important;
+    text-transform: none !important;
+    border-radius: 8px !important;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    padding: 0.5rem 0 !important;
 }
 
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
