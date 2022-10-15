@@ -1,9 +1,24 @@
-/* Navbar */
-.navbar {
+/* Navbar versión mobile */
+.navbar-mobile {
+    display: flex;
     width: 100%;
     height: 6.25rem;
-    display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+    background: linear-gradient(#696A6C, #FFFFFF, #696A6C);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+/* Navbar versión desktop */
+.navbar-desktop {
+    width: 100%;
+    height: 6.25rem;
+    display: none;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 2.5rem;
@@ -15,7 +30,7 @@
 
 /* Container con los links */
 .links-navbar {
-    width: 40%;
+    width: 50%;
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
@@ -37,4 +52,24 @@
 .button-navbar {
     padding: 0.625rem 1.25rem;
     border-radius: 8px;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+    .navbar-desktop {
+        display: flex;
+    }
+
+    .navbar-mobile {
+        display: none;
+    }
+}
+
+/* Media queries versión Desktop grande */
+@media (min-width: 1300px) {
+    .links-navbar {
+        width: 40%;
+    }
 }
