@@ -50,6 +50,67 @@
     opacity: 0.5;
 }
 
+/* Menú desplegable de Servicios */
+.navbar-menu-services {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    z-index: 99;
+}
+
+/* Ítems del menú desplegable de Servicios */
+.navbar-menu-services-item {
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* background-color: #696A6C; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-right: 1px solid white;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.navbar-menu-services-item:hover {
+    filter: brightness(200%);
+}
+
+/* Ítem "Diagnóstico" */
+.navbar-menu-services-item-diagnosis {
+    background-color: none;
+    background-image: url('/diagnosis-navbar.png');
+}
+
+/* Ítem "Diseño" */
+.navbar-menu-services-item-design {
+    background-color: none;
+    background-image: url('/design-navbar.png');
+}
+
+/* Ítem "Ejecución" */
+.navbar-menu-services-item-execution {
+    background-color: none;
+    background-image: url('/execution-navbar.png');
+}
+
+/* Número de cada ítem del menú de Servicios */
+.navbar-menu-services-item-number {
+    display: block !important;
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    padding: 0.125rem 1.25rem !important;
+    border-radius: 50% !important;
+    background-color: #0184EF !important;
+    margin-bottom: 1.5rem !important;
+}
+
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
 
 /* Media queries versión Desktop */

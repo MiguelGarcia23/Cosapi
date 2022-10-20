@@ -1,13 +1,27 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import NextLink from 'next/link';
 import Image from 'next/image';
 
 import { Box, Button, Link, Typography } from '@mui/material';
 
+import { MenuServicesNavbarDesktop } from './MenuServicesNavbarDesktop';
+
 import styles from './Navbar.module.css';
 
 export const NavbarDesktop: FC = () => {
+
+  const [ menuService, setMenuService ] = useState(false);
+
+  const handleClick = ( event: any ) => {
+    event.preventDefault();
+
+    if ( menuService === false ) {
+      setMenuService( true );
+    } else {
+      setMenuService( false );
+    }
+  }
   
     return (
 
@@ -29,7 +43,7 @@ export const NavbarDesktop: FC = () => {
           <Box className={ styles['links-navbar'] }>
 
             <NextLink href='/services' passHref>
-              <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Servicios</Link>
+              <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] } onClick={ handleClick }>Servicios</Link>
             </NextLink>
 
             <NextLink href='/projects' passHref>
@@ -49,6 +63,8 @@ export const NavbarDesktop: FC = () => {
             </NextLink>  
 
           </Box>
+
+          { menuService && (<MenuServicesNavbarDesktop />) }
 
         </nav>
     )
