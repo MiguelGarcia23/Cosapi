@@ -1,7 +1,7 @@
 /* Banner principal */
-.diagnostic-banner {
+.design-banner {
     height: 50vh;
-    background-image: url('/diagnostic-banner.png');
+    background-image: url('/design-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,7 +13,7 @@
 }
 
 /* Título del banner principal */
-.title-diagnostic-banner {
+.title-design-banner {
     font-size: 1.75rem !important;
     width: 70% !important;
     letter-spacing: 3% !important;
@@ -28,13 +28,13 @@
 @media (min-width: 768px){
 
     /* Banner principal */
-    .diagnostic-banner {
+    .design-banner {
         height: 70vh;
         padding: 0 3.75rem;
     }
 
     /* Título del banner principal */
-    .title-diagnostic-banner {
+    .title-design-banner {
         font-size: 2.5rem !important;
         width: 60% !important;
     }
@@ -44,12 +44,12 @@
 @media (min-width: 1050px){
 
     /* Banner principal */
-    .diagnostic-banner {
+    .design-banner {
         height: calc(100vh - 100px);
     }
 
     /* Título del banner principal */
-    .title-diagnostic-banner {
+    .title-design-banner {
         font-size: 3.75rem !important;
         width: 50% !important;
     }

@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Box } from '@mui/material';
 
-import { Layout } from "../../components/layouts";
+import { Layout } from '../../components/layouts';
 import { BannerDiagnostic, BodyDiagnostic } from '../../components/services/diagnostico';
 
 

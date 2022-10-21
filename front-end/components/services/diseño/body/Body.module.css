@@ -1,0 +1,23 @@
+/* Body de la página */
+.design-body {
+    background-color: white;
+    padding: 5rem 3.75rem;
+}
+
+/* Título de intro a la página */
+.design-intro-title {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-bottom: 0.625rem !important;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Título de intro a la página */
+    .design-intro-title {
+        width: 85% !important;
+    }
+}
