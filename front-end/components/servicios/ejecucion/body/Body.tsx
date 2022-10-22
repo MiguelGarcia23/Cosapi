@@ -28,7 +28,7 @@ export const BodyExecution: FC = () => {
 
                 <CardServicesExecution 
                     title= 'Mantenimiento y reparación de equipos'
-                    info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
+                    info= 'Puedes contar con nosotros para realizar cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de tus equipos o para realizar reparaciones y corregir errores.'
                     link= '/servicios/ejecucion/mantenimiento'
                     img= '/execution-maintenance.png'
                     alt= 'Imagen de mantenimiento y reparación de equipos'
@@ -36,7 +36,7 @@ export const BodyExecution: FC = () => {
 
                 <CardServicesExecution 
                     title= 'Automatización de equipos y sistemas'
-                    info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
+                    info= 'Te ayudamos a mejorar la eficiencia de tus sistemas de control y operaciones ofreciendo equipos innovadores y confiables para optimizar el manejo de tu planta de producción.'
                     link= '/servicios/ejecucion/automatizacion'
                     img= '/execution-automation.png'
                     alt= 'Imagen de automatización de equipos y sistemas'
@@ -44,7 +44,7 @@ export const BodyExecution: FC = () => {
 
                 <CardServicesExecution 
                     title= 'Suministro de equipos y personal especializado'
-                    info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
+                    info= 'Ponemos a tu alcance equipos de última tecnología que te ayudarán a obtener los mejores resultados en tu proyecto, de la mano de personal capacitado con años de experiencia en el mercado seleccionados según tus necesidades'
                     link= '/servicios/ejecucion/suministro'
                     img= '/execution-supplies.png'
                     alt= 'Imagen de suministro de equipos y personal especializado'
