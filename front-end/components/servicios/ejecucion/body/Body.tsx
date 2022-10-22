@@ -21,7 +21,7 @@ export const BodyExecution: FC = () => {
                 <CardServicesExecution 
                     title= 'Instalación de equipos'
                     info= 'Instalar equipos que sean accesibles y seguros requiere tanto una estrategia inteligente como los productos correctos.'
-                    link= '/servicios/execution/instalacion'
+                    link= '/servicios/ejecucion/instalacion'
                     img= '/execution-installation.png'
                     alt= 'Imagen de instalación de equipos'
                 />
@@ -29,7 +29,7 @@ export const BodyExecution: FC = () => {
                 <CardServicesExecution 
                     title= 'Mantenimiento y reparación de equipos'
                     info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
-                    link= '/servicios/execution/mantenimiento'
+                    link= '/servicios/ejecucion/mantenimiento'
                     img= '/execution-maintenance.png'
                     alt= 'Imagen de mantenimiento y reparación de equipos'
                 />
@@ -37,7 +37,7 @@ export const BodyExecution: FC = () => {
                 <CardServicesExecution 
                     title= 'Automatización de equipos y sistemas'
                     info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
-                    link= '/servicios/execution/automatizacion'
+                    link= '/servicios/ejecucion/automatizacion'
                     img= '/execution-automation.png'
                     alt= 'Imagen de automatización de equipos y sistemas'
                 />
@@ -45,7 +45,7 @@ export const BodyExecution: FC = () => {
                 <CardServicesExecution 
                     title= 'Suministro de equipos y personal especializado'
                     info= 'En Cosapi ponemos a tu disposición cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de los equipos o para realizar reparaciones y corregir errores.'
-                    link= '/servicios/execution/instalacion'
+                    link= '/servicios/ejecucion/suministro'
                     img= '/execution-supplies.png'
                     alt= 'Imagen de suministro de equipos y personal especializado'
                 />

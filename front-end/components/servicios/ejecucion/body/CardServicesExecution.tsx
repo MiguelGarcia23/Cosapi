@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { NextRouter, useRouter } from 'next/router';
 
 import { Box, Button, Typography } from '@mui/material';
 
@@ -16,6 +17,12 @@ interface Props {
 
 export const CardServicesExecution: FC<Props> = ({ title, info, link, img, alt }) => {
 
+    const router: NextRouter = useRouter();
+
+    const handleClick = (): void => {
+        router.push( link )
+    }
+
     return (
 
         <Box className={ styles['execution-card-services'] }>
@@ -26,7 +33,7 @@ export const CardServicesExecution: FC<Props> = ({ title, info, link, img, alt }
 
                 <Typography variant='body2' color='info.dark' sx={{ marginBottom: '2.125rem' }}>{ info }</Typography>
 
-                <Button variant='outlined' color='secondary' className={ styles['execution-card-services-button'] }>
+                <Button variant='outlined' color='secondary' className={ styles['execution-card-services-button'] } onClick={ handleClick }>
                     <Typography variant='body2' fontWeight={ 700 } color='info.dark' 
                         className={ styles['execution-card-services-button-text'] }>
                         Ver más
