@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useRouter } from 'next/router';
 
 import { Box, Grid, Typography } from '@mui/material';
 
@@ -6,23 +7,29 @@ import styles from './Navbar.module.css';
 
 export const MenuServicesNavbarDesktop: FC = () => {
 
+    const router = useRouter();
+
+    const handleClick = ( event: any ): void => {
+        router.push(`/servicios/${ event.target.id }`)
+    }
+
     return (
 
         <Box className={ styles['navbar-menu-services'] }>
 
             <Grid container spacing={ 0 } sx={{ width: '100vw', display: 'flex', flexWrap: 'nowrap' }}>
 
-                <Grid item className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-diagnosis']}` }>
+                <Grid item id='diagnostico' className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-diagnosis']}` } onClick={ handleClick }>
                     <Typography variant='body1' color='info.main' className={ styles['navbar-menu-services-item-number'] }>1</Typography>
                     <Typography variant='h2' color='info.main'>Diagnóstico</Typography>
                 </Grid>
 
-                <Grid item className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-design']}` }>
+                <Grid item id='disenio' className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-design']}` } onClick={ handleClick }>
                     <Typography variant='body1' color='info.main' className={ styles['navbar-menu-services-item-number'] }>2</Typography>
                     <Typography variant='h2' color='info.main'>Diseño</Typography>
                 </Grid>
 
-                <Grid item className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-execution']}` }>
+                <Grid item id='ejecucion' className={ `${styles['navbar-menu-services-item']} ${styles['navbar-menu-services-item-execution']}` } onClick={ handleClick }>
                     <Typography variant='body1' color='info.main' className={ styles['navbar-menu-services-item-number'] }>3</Typography>
                     <Typography variant='h2' color='info.main'>Ejecución</Typography>
                 </Grid>
