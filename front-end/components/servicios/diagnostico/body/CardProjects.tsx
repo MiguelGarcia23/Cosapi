@@ -1,10 +1,7 @@
 import { FC } from 'react';
-
-import { Box, Card, CardActionArea, CardMedia, CardContent, Grid, Typography } from '@mui/material';
-import EastIcon from '@mui/icons-material/East';
-
-import styles from './Body.module.css'
 import Image from 'next/image';
+
+import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
 
 interface Props {
     img: string,
