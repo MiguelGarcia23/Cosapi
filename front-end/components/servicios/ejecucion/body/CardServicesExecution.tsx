@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { NextRouter, useRouter } from 'next/router';
 
 import { Box, Button, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 import Image from 'next/image';
@@ -23,9 +25,13 @@ export const CardServicesExecution: FC<Props> = ({ title, info, link, img, alt }
         router.push( link )
     }
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Box className={ styles['execution-card-services'] }>
+        <Box data-aos='zoom-out' className={ styles['execution-card-services'] }>
 
             <Box className={ styles['execution-card-services-info'] }>
 

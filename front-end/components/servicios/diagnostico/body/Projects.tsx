@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Image from 'next/image';
 
 import { Box, Button, Grid, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { CardProjectsDiagnostic } from './CardProjects';
 
@@ -9,9 +11,13 @@ import styles from './Body.module.css';
 
 export const ProjectsDiagnostic: FC = () => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Box sx={{ marginBottom: '3.75rem' }}>
+        <Box data-aos='fade-up' sx={{ marginBottom: '3.75rem' }}>
 
             <Box className={ styles['diagnostic-projects-img']}>
                 <Image 

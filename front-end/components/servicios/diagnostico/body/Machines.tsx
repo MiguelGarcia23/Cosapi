@@ -1,15 +1,21 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Image from 'next/image';
 
 import { Box, Button, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
 export const MachinesDiagnostic: FC = () => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Box>
+        <Box data-aos='fade-up'>
 
             <Box className={ styles['diagnostic-machines-img']}>
                 <Image 

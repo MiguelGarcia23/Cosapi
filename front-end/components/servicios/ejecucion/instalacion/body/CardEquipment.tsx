@@ -1,9 +1,8 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
-import { Box, Card, CardActionArea, CardMedia, CardContent, Grid, Typography } from '@mui/material';
-import EastIcon from '@mui/icons-material/East';
-
-import styles from './MainServices.module.css'
+import { Card, CardMedia, CardContent, Grid, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface Props {
     img: string;
@@ -14,9 +13,13 @@ interface Props {
 
 export const CardEquipmentsInstallation: FC<Props> = ({ img, alt, subtitle, title }) => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Grid item xs={ 12 } md={ 6 } lg={ 4 }>        
+        <Grid item xs={ 12 } md={ 6 } lg={ 4 } data-aos='zoom-out'>        
             <Card sx={{ maxWidth: 300, margin: '0px auto', backgroundColor: 'transparent', border: 'none', boxShadow: 'none', borderRadius: '0' }}>
                 <CardMedia
                     component='img'

@@ -1,14 +1,20 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
 export const BodyDesing: FC = () => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Box className={ styles['design-body'] }>
+        <Box data-aos='fade-up' className={ styles['design-body'] }>
 
             <Typography variant='h5' color='info.dark' className={ styles['design-intro-title']}>
                 En Cosapi entendemos que cada proyecto tiene necesidades diferentes, por lo que estamos preparados para diseñar planes a medida en función a los objetivos concretos de cada cliente, ajustándonos a los tiempos, presupuesto, etc.    

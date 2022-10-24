@@ -1,15 +1,22 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Button, Typography, Grid } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { CardGallery } from './CardGallery';
 
 import styles from './Gallery.module.css';
 
 export const Gallery: FC = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
-        <Box className={ styles['gallery-home'] }>
+        <Box data-aos='fade-up' className={ styles['gallery-home'] }>
 
             <Typography variant='h2' color='info.dark'>Galería de proyectos</Typography>
 

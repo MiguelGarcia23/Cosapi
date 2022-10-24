@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { Box, Grid, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Navbar.module.css';
 
@@ -13,9 +15,13 @@ export const MenuServicesNavbarDesktop: FC = () => {
         router.push(`/servicios/${ event.target.id }`)
     }
 
+    useEffect(() => {
+        AOS.init({ duration: 600 })
+    }, [])
+
     return (
 
-        <Box className={ styles['navbar-menu-services'] }>
+        <Box data-aos='zoom-out' className={ styles['navbar-menu-services'] }>
 
             <Grid container spacing={ 0 } sx={{ width: '100vw', display: 'flex', flexWrap: 'nowrap' }}>
 
