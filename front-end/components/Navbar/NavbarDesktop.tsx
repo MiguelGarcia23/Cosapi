@@ -42,19 +42,19 @@ export const NavbarDesktop: FC = () => {
 
           <Box className={ styles['links-navbar'] }>
 
-            <NextLink href='/services' passHref>
+            <NextLink href='/servicios' passHref>
               <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] } onClick={ handleClick }>Servicios</Link>
             </NextLink>
 
-            <NextLink href='/projects' passHref>
+            <NextLink href='/proyectos' passHref>
               <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Proyectos</Link>
             </NextLink>
 
-            <NextLink href='/aboutUs' passHref>
+            <NextLink href='/sobreNosotros' passHref>
               <Link variant='h5' color='info.dark' style={{ textDecoration: 'none' }} className={ styles['link-navbar'] }>Nosotros</Link>
             </NextLink>
 
-            <NextLink href='/contact' passHref>
+            <NextLink href='/contacto' passHref>
               <Link underline='none'>
                 <Button variant="contained" color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }}>
                   <Typography variant="h5" color="info.main" textTransform='capitalize'>Contáctanos</Typography>
