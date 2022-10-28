@@ -1,0 +1,108 @@
+/* Body de la página */
+.project-body {
+    padding: 3.75rem 0;
+}
+
+/* Imágenes del proyecto */
+.project-img {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    max-width: 76.25rem;
+}
+
+/* Sección de Servicios ofrecidos */
+.project-services {
+    background-color: black;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Título de la sección de Servicios ofrecidos */
+.project-services-title {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+}
+
+/* Contenedor de las cajas de servicios */
+.project-services-cards {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta de servicio */
+.project-service-card {
+    background-color: white;
+    max-width: 26.5625rem;
+    height: 180px;
+    margin: 0 auto !important;
+    padding: 0;
+    transition: background-color .3s;
+}
+
+.project-service-card:hover {
+    background-color: #696A6C;
+}
+
+/* Cada cuadro de info de la sección de Info */
+.project-info-container {
+    background-color: #B8BFD0;
+    width: 100%;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto !important;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Imágenes del proyecto */
+    .project-img {
+        height: 19rem;
+    }
+}
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Imágenes del proyecto */
+    .project-img {
+        height: 31.25rem;
+    }
+
+    /* Título de la sección de Servicios ofrecidos */
+    .project-services-title {
+        width: 8.75rem !important;
+        margin-bottom: 1rem !important;
+        margin-right: 1rem !important;
+        text-align: left !important;
+    }
+
+    /* Contenedor de las cajas de servicios */
+    .project-services-cards {
+        width: 80% !important;
+        margin: 0;
+    }
+
+    /* Cada tarjeta de servicio */
+    .project-service-card {
+        max-width: 40rem;
+    }
+
+    /* Cada cuadro de info de la sección de Info */
+    .project-info-container {
+        height: 18.125rem;
+    }
+}
