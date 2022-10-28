@@ -42,12 +42,14 @@
 .link-navbar {
     font-size: 1.25rem;
     font-weight: 700;
-    text-decoration: none;
-    transition: opacity .5s;
+    text-decoration: none !important;
+    transition: opacity .5s, padding .5s, border-bottom .5s;
 }
 
 .link-navbar:hover {
     opacity: 0.5;
+    padding: 0.5rem 0;
+    border-bottom: 4px solid #0184EF;
 }
 
 /* Menú desplegable de Servicios */
