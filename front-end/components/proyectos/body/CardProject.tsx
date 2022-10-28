@@ -1,6 +1,8 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Card, CardActionArea, CardContent, CardMedia, Typography, Grid } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
@@ -13,9 +15,13 @@ interface Props {
 
 export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
         
-        <Grid item sm={ 12 } lg={ 6 }>
+        <Grid item sm={ 12 } lg={ 6 } data-aos='zoom-out'>
 
             <Card className={ styles['projects-card'] }>
                 <CardActionArea sx={{ position: 'relative' }}>

@@ -1,7 +1,9 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Card, CardActionArea, CardContent, Grid, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
@@ -11,9 +13,13 @@ interface Props {
 
 export const CardService: FC<Props> = ({ title }) => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
         
-        <Grid item sm={ 12 } md={ 4 } lg={ 3 }>
+        <Grid item sm={ 12 } md={ 4 } lg={ 3 } data-aos='zoom-out'>
 
             <Card className={ styles['project-service-card'] }>
                 <CardActionArea sx={{ height: '100%' }}>

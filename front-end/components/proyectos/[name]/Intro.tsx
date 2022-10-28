@@ -1,11 +1,17 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import Image from 'next/image';
 
 import { Box, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
 export const IntroProject: FC = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
 
     return (
 
@@ -15,7 +21,7 @@ export const IntroProject: FC = () => {
                 PDVSA Petrosucre
             </Typography>
 
-            <Box className={ styles['project-img'] }>
+            <Box className={ styles['project-img'] } data-aos='zoom-out'>
                 <Image 
                     src='/petrosucre.png'
                     alt='Imagen de Petrosucre'
