@@ -1,4 +1,5 @@
 import { FC, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { Box, Button, Typography, Grid } from '@mui/material';
 import AOS from 'aos';
@@ -13,6 +14,12 @@ export const Gallery: FC = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
+
+    const router = useRouter();
+
+    const handleClick = (): void => {
+        router.push('/proyectos')
+    }
 
     return (
 
@@ -52,7 +59,7 @@ export const Gallery: FC = () => {
 
             </Grid>
 
-            <Button variant="outlined" color="secondary" className={ styles['gallery-home-button'] }>
+            <Button variant="outlined" color="secondary" className={ styles['gallery-home-button'] } onClick={ handleClick }>
                 <Typography variant="h5" color="info.dark">Ver más proyectos</Typography>
             </Button>
 

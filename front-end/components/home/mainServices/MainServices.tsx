@@ -29,6 +29,7 @@ export const MainServices: FC = () => {
                         alt='Imagen de desarrollo de proyectos'
                         subtitle='Diseño'
                         title='Desarrollo de proyectos'
+                        link='disenio'
                     />
 
 
@@ -37,6 +38,7 @@ export const MainServices: FC = () => {
                         alt='Imagen de instalación de equipos'
                         subtitle='Ejecución'
                         title='Instalación de equipos'
+                        link='ejecucion/instalacion'
                     />
 
                     <CardMainServices 
@@ -44,6 +46,7 @@ export const MainServices: FC = () => {
                         alt='Imagen de suministro de equipos'
                         subtitle='Ejecución'
                         title='Suministro de equipos'
+                        link='ejecucion/instalacion'
                     />
                 
                 </Grid>
