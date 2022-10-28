@@ -1,0 +1,56 @@
+/* Banner principal */
+.contact-banner {
+    height: 50vh;
+    background-image: url('/diagnostic-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Título del banner principal */
+.title-contact-banner {
+    font-size: 1.75rem !important;
+    width: 70% !important;
+    letter-spacing: 3% !important;
+    line-height: 130% !important;
+    margin-bottom: 1.5rem !important;
+    text-align: left !important;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Banner principal */
+    .contact-banner {
+        height: 70vh;
+        padding: 0 3.75rem;
+    }
+
+    /* Título del banner principal */
+    .title-contact-banner {
+        font-size: 2.5rem !important;
+        width: 60% !important;
+    }
+}
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Banner principal */
+    .contact-banner {
+        height: calc(100vh - 100px);
+    }
+
+    /* Título del banner principal */
+    .title-contact-banner {
+        font-size: 3.75rem !important;
+        width: 50% !important;
+    }
+}
