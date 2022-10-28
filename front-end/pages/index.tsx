@@ -9,7 +9,7 @@ const HomePage: NextPage = () => {
 
     return (
 
-      <Layout>
+      <Layout title='Home'>
         
         <Box>
 
