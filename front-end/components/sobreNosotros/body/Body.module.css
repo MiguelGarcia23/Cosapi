@@ -1,0 +1,100 @@
+/* Body de la página */
+.about-us-body {
+    padding: 5rem 3.75rem;
+}
+
+/* Título de intro a la página */
+.about-us-intro-title {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
+}
+
+/* Imagen de intro a la página */
+.about-us-intro-img {
+    background-image: url('/building-cosapi.png');
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto sobre la imagen de intro de la página */
+.about-us-intro-text {
+    display: block !important;
+    margin-top: 1.5rem !important;
+    width: 100% !important;
+    font-size: 2rem !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
+}
+
+/* Contenedor del título de Nuestro equipo de trabajo */
+.about-us-work-team-title {
+    margin-bottom: 3.75rem;
+    padding: 0;
+}
+
+/* Imagen de equipo de trabajo */
+.about-us-work-team-img {
+    width: 100%;
+    height: 12.5rem;
+    position: relative;
+}
+
+/* Contenedor de Nuestros clientes */
+.about-us-clients {
+    padding: 0;
+}
+
+/* Contenedor de las imágenes de Nuestros clientes */
+.about-us-clients-images {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 3.75rem;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Título de intro a la página */
+    .about-us-intro-title {
+        width: 85%;
+    }
+
+    /* Texto sobre la imagen de intro de la página */
+    .about-us-intro-text {
+        width: 80% !important;
+        font-size: 2.5rem !important;
+    }
+
+    /* Contenedor del título de Nuestro equipo de trabajo */
+    .about-us-work-team-title {
+        padding: 0 2.5rem;
+    }
+
+    /* Imagen de equipo de trabajo */
+    .about-us-work-team-img {
+        height: 31.25rem;
+    }
+
+    /* Contenedor de Nuestros clientes */
+    .about-us-clients {
+        padding: 0 2.5rem;
+    }
+}
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Texto sobre la imagen de intro de la página */
+    .about-us-intro-text {
+        width: 60% !important;
+        font-size: 3rem !important;
+    }
+}
