@@ -6,23 +6,28 @@ import { Layout } from '../components/layouts';
 import { FormContact, Gallery, MainBanner, MainServices, Welcome } from '../components/home';
 
 const HomePage: NextPage = () => {
-  return (
-    <Layout>
-      <Box>
 
-        <MainBanner />
+    return (
 
-        <Welcome />
+      <Layout>
+        
+        <Box>
 
-        <MainServices />
+          <MainBanner />
 
-        <Gallery />
+          <Welcome />
 
-        <FormContact />
+          <MainServices />
 
-      </Box>
-    </Layout>
-  )
+          <Gallery />
+
+          <FormContact />
+
+        </Box>
+
+      </Layout>
+
+    )
 }
 
 export default HomePage;

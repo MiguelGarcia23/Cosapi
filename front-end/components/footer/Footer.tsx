@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import NextLink from 'next/link';
 
-import { Box, Grid, Link } from '@mui/material';
+import { Box, Grid, Link, Typography } from '@mui/material';
 import { Email, LocationOn, PhoneInTalk } from '@mui/icons-material';
 
 import { ItemFooter } from './ItemFooter';
@@ -20,13 +20,13 @@ export const Footer: FC = () => {
                 <ItemFooter title='Nuestros servicios' large={ 3 }>
 
                     <>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/diagnostico' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diagnóstico</Link>
                         </NextLink>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/disenio' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diseño</Link>
                         </NextLink>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/ejecucion' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Ejecución</Link>
                         </NextLink>
                     </>
@@ -36,10 +36,10 @@ export const Footer: FC = () => {
                 <ItemFooter title='Empresa' large={ 3 }>
 
                     <>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/proyectos' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Proyectos</Link>
                         </NextLink>
-                        <NextLink href='/' passHref>
+                        <NextLink href='/sobreNosotros' passHref>
                         <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Sobre Nosotros</Link>
                         </NextLink>
                     </>
@@ -49,29 +49,23 @@ export const Footer: FC = () => {
                 <ItemFooter title='Contacto' large={ 4 }>
 
                     <>
-                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                        <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
                             <PhoneInTalk color='info' sx={{ marginRight: '0.625rem'}} />
-                            <NextLink href='/' passHref>
-                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                    +584161234567
-                                </Link>
-                            </NextLink>
+                            <Typography variant='body2' color='info.main'>
+                                +584161234567
+                            </Typography>
                         </Box>
-                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                        <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
                             <Email color='info' sx={{ marginRight: '0.625rem'}} />
-                            <NextLink href='/' passHref>
-                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                    cosapi@gmail.com
-                                </Link>
-                            </NextLink>
+                            <Typography variant='body2' color='info.main'>
+                                cosapi@gmail.com
+                            </Typography>
                         </Box>
-                        <Box className={ styles['footer-link'] } sx={{ display: 'flex' }}>
+                        <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
                             <LocationOn color='info' sx={{ marginRight: '0.625rem'}} />
-                            <NextLink href='/' passHref>
-                                <Link variant='body2' color='info.main' sx={{ textDecoration: 'none' }}>
-                                    Centro Empresarial Tecno Acero de Venezuela, Maturin-Estado Monagas
-                                </Link>
-                            </NextLink>
+                            <Typography variant='body2' color='info.main'>
+                                Centro Empresarial Tecno Acero de Venezuela, Maturin-Estado Monagas
+                            </Typography>
                         </Box>
                     </>
 
