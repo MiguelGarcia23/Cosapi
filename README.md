@@ -28,6 +28,12 @@ _Clonar este repositorio_
 git clone https://github.com/MiguelGarcia23/Cosapi
 ```
 
+_Entrar a la carpeta del front-end_
+
+```
+cd front-end
+```
+
 _Instalar todas las dependencias necesarias_
 
 ```
