@@ -11,6 +11,19 @@
     margin-bottom: 0.625rem !important;
 }
 
+/* Imagen de diseño del body */
+.design-img {
+    width: 100%;
+    height: 12.5rem;
+    position: relative;
+    margin-bottom: 3.75rem;
+}
+
+/* Contenedor de info de diagnóstico */
+.design-info-container {
+    padding: 0;
+}
+
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
 
 /* Media queries versión Tablet */
@@ -19,5 +32,15 @@
     /* Título de intro a la página */
     .design-intro-title {
         width: 85% !important;
+    }
+
+    /* Imagen de diseño del body */
+    .design-img {
+        height: 31.25rem;
+    }
+
+    /* Contenedor de info de diagnóstico */
+    .design-info-container {
+        padding: 0 2.5rem;
     }
 }
