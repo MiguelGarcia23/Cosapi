@@ -8,8 +8,14 @@ import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
+interface Props {
+    duration     : number;
+    image_company: string;
+    year         : number;
+}
 
-export const InfoProject: FC = () => {
+
+export const InfoProject: FC<Props> = ({ duration, image_company, year }) => {
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
@@ -29,7 +35,7 @@ export const InfoProject: FC = () => {
                     </Typography>
 
                     <Typography variant='body2' color='info.dark' fontWeight={ 500 } sx={{ fontSize: '1.5rem' }}>
-                        2 semanas
+                        { duration } días
                     </Typography>
                 </Box>
 
@@ -40,7 +46,7 @@ export const InfoProject: FC = () => {
 
                 <Box className={ styles['project-info-container'] }>
                     <Image 
-                        src= '/logo-pdvsa.svg'
+                        src= {`/${ image_company }`}
                         alt= 'PDVSA'
                         width= { 255 }
                         height= { 100 }
@@ -60,7 +66,7 @@ export const InfoProject: FC = () => {
                     </Typography>
 
                     <Typography variant='body2' color='info.dark' fontWeight={ 500 } sx={{ fontSize: '1.5rem' }}>
-                        2010
+                        { year }
                     </Typography>
                 </Box>
 

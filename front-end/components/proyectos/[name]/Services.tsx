@@ -6,7 +6,12 @@ import { CardService } from './CardService';
 
 import styles from './Body.module.css';
 
-export const ServicesProject: FC = () => {
+interface Props {
+    services: string[];
+}
+
+
+export const ServicesProject: FC<Props> = ({ services }) => {
 
     return (
 
@@ -17,14 +22,21 @@ export const ServicesProject: FC = () => {
             </Typography>
 
             <Grid container spacing={ 2 } className={ styles['project-services-cards'] }>
-                
-                <CardService 
-                    title= 'Mantenimiento de válvulas de seguridad y alivio'
-                />
 
-                <CardService 
-                    title= 'Calibración de válvulas de seguridad y alivio'
-                />
+                <>
+                    {
+                        services.map( ( service, i ) => {
+
+                            return(
+                                <CardService 
+                                    key= { i }
+                                    title= {`${ service.charAt(0).toUpperCase() + service.slice(1) } de válvulas de seguridad y alivio`}
+                                />
+                            )
+
+                        })
+                    }
+                </>
 
             </Grid>
 

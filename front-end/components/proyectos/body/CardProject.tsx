@@ -1,10 +1,12 @@
 import { FC, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { Card, CardActionArea, CardContent, CardMedia, Typography, Grid } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
+
 
 interface Props {
     img: string,
@@ -17,13 +19,19 @@ export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
-    }, [])
+    }, []);
+
+    const router = useRouter();
+
+    const handleClick = (): void => {
+        router.push(`/proyectos/${ title.toLowerCase() }`)
+    }
 
     return (
         
         <Grid item sm={ 12 } lg={ 6 } data-aos='zoom-out'>
 
-            <Card className={ styles['projects-card'] }>
+            <Card className={ styles['projects-card'] } onClick={ handleClick }>
                 <CardActionArea sx={{ position: 'relative' }}>
 
                     <CardMedia

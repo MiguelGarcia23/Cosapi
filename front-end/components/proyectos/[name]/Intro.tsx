@@ -7,7 +7,13 @@ import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
 
-export const IntroProject: FC = () => {
+interface Props {
+    name         : string;
+    image_project: string;
+}
+
+
+export const IntroProject: FC<Props> = ({ name, image_project }) => {
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
@@ -18,12 +24,12 @@ export const IntroProject: FC = () => {
         <Box sx={{ padding: '0 3.75rem' }}>
 
             <Typography variant='h2' color='info.dark' sx={{ textAlign: 'left', marginBottom: '3.75rem' }}>
-                PDVSA Petrosucre
+                { name }
             </Typography>
 
             <Box className={ styles['project-img'] } data-aos='zoom-out'>
                 <Image 
-                    src='/petrosucre.png'
+                    src={`/${ image_project }`}
                     alt='Imagen de Petrosucre'
                     layout='fill'
                 />
