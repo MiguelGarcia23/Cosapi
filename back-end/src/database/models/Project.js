@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER
         },
         year:{
-            type: dataTypes.DATEONLY
+            type: dataTypes.INTEGER
         },
         image_project:{
             type: dataTypes.STRING

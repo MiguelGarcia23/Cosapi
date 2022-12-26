@@ -10,14 +10,27 @@ const cookies = require('cookie-parser');
 /* Requerimos el módulo methodOverride */
 const methodOverride = require('method-override');
 
+/* Importando el módulo de cors */
+const cors = require('cors');
+
 /* Importado el módulo nativo path en la variable path */
-const path = require('path');
+/* const path = require('path'); */
 
 /* Guardando en la variable app la ejecución de la función Express */
 const app = express();
 
 /* Importando el middleware de usuario logueado */
 /* const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware') */
+
+/* Estableciendo las configuraciones de cors */
+const corsOptions ={
+  origin: 'http://localhost:3000', 
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200
+}
+
+/* Usamos el cors */
+app.use(cors(corsOptions));
 
 /* Configurando el uso de session */
 app.use(session({
@@ -41,12 +54,6 @@ app.use(express.json());
 
 /* Estableciendo los archivos estáticos */
 app.use(express.static('public'));
-
-/* Configuramos el motor de plantilla */
-/* app.set ('view engine', 'ejs'); */
-
-/* Configuramos dónde se encuentran las vistas */
-/* app.set ('views', path.join(__dirname, '/views')); */
 
 /* Importamos la ruta de proyectos */
 const projectsRouter = require('./routes/projectsRouter');

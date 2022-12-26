@@ -1,5 +1,4 @@
 const db = require("../database/models");
-const Op = db.Sequelize.Op;
 
 /* Configuramos el controlador */
 const adminController = {
@@ -7,14 +6,20 @@ const adminController = {
     create: ( req, res ) => {
 
         db.Projects.create({
-            ...req.body
+            name: req.body.name,
+            duration: req.body.duration,
+            year: req.body.year,
+            image_project: req.files.image_project[0].filename,
+            image_company: req.files.image_company[0].filename,
+            services: req.body.services
         })
-            .then(() => {
-                res.redirect('/projects');
+            .then( res => {
+                res.send( res );
             })
-            .catch(e => {
-                res.send(e)
+            .catch( e => {
+                res.send( e )
             })
+            /* console.log( req.body ); */
       
     },
 
