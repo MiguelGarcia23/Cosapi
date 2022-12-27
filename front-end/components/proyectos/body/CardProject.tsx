@@ -36,7 +36,7 @@ export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
 
                     <CardMedia
                         component='img'
-                        image={ img }
+                        image={`http://localhost:3030/img/projects/${ img }`}
                         alt={ alt }
                     />
 

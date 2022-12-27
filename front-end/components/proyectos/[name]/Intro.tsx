@@ -29,7 +29,7 @@ export const IntroProject: FC<Props> = ({ name, image_project }) => {
 
             <Box className={ styles['project-img'] } data-aos='zoom-out'>
                 <Image 
-                    src={`/${ image_project }`}
+                    src={`http:/localhost:3030/img/projects/${ image_project }`}
                     alt='Imagen de Petrosucre'
                     layout='fill'
                 />
