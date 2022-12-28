@@ -1,7 +1,7 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { Box, Button, Checkbox, FormControlLabel, FormGroup, Grid, Input, TextField, Typography, styled } from '@mui/material';
+import { Box, Button, Checkbox, FormControlLabel, FormGroup, Grid, Input, TextField, Typography, styled, FormControl, FormHelperText } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -35,21 +35,138 @@ export const BodyCreateProject: FC = () => {
         duration: '',
         year: '',
         image_project: '',
-        image_company: ''
+        image_company: '',
+        services: ''
     });
+
+    let [ errorsState, setErrorsState ] = useState({
+        name: false,
+        duration: false,
+        year: false,
+        image_project: false,
+        image_company: false,
+        services: false
+    });
+
+    let [ isErrorState, setIsErrorState ] = useState( false );
+
+    let suministroCheckbox: any = useRef();
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, []);
 
     const handleInputChange = ( event: any ) => {
-        setData({
-            ...data,
-            [event.target.name] : ( event.target.name === 'image_project' || event.target.name === 'image_company' ? event.target.files[0] : event.target.value ),
-        })
+
+        let isError = false;
+        let errors: any = errorsState;
+        let regexNumbers = /^\d+$/;
+        let acceptedExtensionsImgs = [ 'image/jpeg', 'image/jpg', 'image/png' ];
+
+        if ( event.target.name === 'name' && event.target.value.length > 49 ) {
+            errors.name = 'El campo "Nombre de empresa" debe tener menos de 50 caracteres';
+            isError = true;
+        }
+
+        if ( event.target.name === 'duration' && !regexNumbers.test( event.target.value ) ) {
+            errors.duration = 'El campo "Tiempo de duración" solo acepta números';
+            isError = true;
+        } else if ( event.target.name === 'duration' && event.target.value.length > 3 ) {
+            errors.duration = 'El campo "Tiempo de duración" debe tener menos de 4 números';
+            isError = true;
+        }
+
+        if ( event.target.name === 'year' && !regexNumbers.test( event.target.value ) ) {
+            errors.year = 'El campo "Fecha del proyecto" solo acepta números';
+            isError = true;
+        } else if ( event.target.name === 'year' && event.target.value.length !== 4 ) {
+            errors.year = 'El campo "Fecha del proyecto" debe tener 4 números';
+            isError = true;
+        }
+
+        if ( event.target.name === 'image_project' && !acceptedExtensionsImgs.includes( event.target.files[0].type ) ) {
+            errors.image_project = 'Las extensiones de archivo permitidas son .jpg, .jpeg y .png';
+            isError = true;
+        }
+
+        if ( event.target.name === 'image_company' && !acceptedExtensionsImgs.includes( event.target.files[0].type ) ) {
+            errors.image_company = 'Las extensiones de archivo permitidas son .jpg, .jpeg y .png';
+            isError = true;
+        }
+
+        if ( !isError ) {
+            setData({
+                ...data,
+                [event.target.name] : ( event.target.name === 'image_project' || event.target.name === 'image_company' ? event.target.files[0] : event.target.value ),
+            })
+            setIsErrorState( false );
+            setErrorsState({
+                ...errorsState,
+                [event.target.name] : false
+            })
+        } else {
+            setIsErrorState( true );
+            setErrorsState( errors );
+        }
+
     };
 
-    let newServicesArray: string[] = [];
+    const handleInputBlur = ( event: any ) => {
+
+        let isError = false;
+        let errors: any = errorsState;
+        var regexNumbers = /^\d+$/;
+        let acceptedExtensionsImgs = [ 'image/jpeg', 'image/jpg', 'image/png' ];
+
+        if ( event.target.name === 'name' && event.target.value.length > 49 ) {
+            errors.name = 'El campo "Nombre de empresa" debe tener menos de 50 caracteres';
+            isError = true;
+        }
+
+        if ( event.target.name === 'duration' && !regexNumbers.test( event.target.value ) ) {
+            errors.duration = 'El campo "Tiempo de duración" solo acepta números';
+            isError = true;
+        } else if ( event.target.name === 'duration' && event.target.value.length > 3 ) {
+            errors.duration = 'El campo "Tiempo de duración" debe tener menos de 4 números';
+            isError = true;
+        }
+
+        if ( event.target.name === 'year' && !regexNumbers.test( event.target.value ) ) {
+            errors.year = 'El campo "Fecha del proyecto" solo acepta números';
+            isError = true;
+        } else if ( event.target.name === 'year' && event.target.value.length !== 4 ) {
+            errors.year = 'El campo "Fecha del proyecto" debe tener 4 números';
+            isError = true;
+        }
+
+        if ( event.target.name === 'image_project' && event.target.files[0] && !acceptedExtensionsImgs.includes( event.target.files[0].type ) ) {
+            errors.image_project = 'Las extensiones de archivo permitidas son .jpg, .jpeg y .png';
+            isError = true;
+        }
+
+        if ( event.target.name === 'image_company' && event.target.files[0] && !acceptedExtensionsImgs.includes( event.target.files[0].type ) ) {
+            errors.image_company = 'Las extensiones de archivo permitidas son .jpg, .jpeg y .png';
+            isError = true;
+        }
+
+        if ( !isError ) {
+            setData({
+                ...data,
+                [event.target.name] : ( event.target.name === 'image_project' || event.target.name === 'image_company' ? event.target.files[0] : event.target.value ),
+            })
+            setIsErrorState( false );
+            setErrorsState({
+                ...errorsState,
+                [event.target.name] : false
+            })
+        } else {
+            setIsErrorState( true );
+            setErrorsState( errors );
+        }
+        
+    };
+
+    let newServicesArray: any = [];
 
     const handleCheckboxChange = async ( event: any ) => {
 
@@ -58,42 +175,92 @@ export const BodyCreateProject: FC = () => {
         if ( !newServicesArray.includes( service ) ) {
             newServicesArray.push( service );
         } else {
-            newServicesArray = newServicesArray.filter( item => {
+            newServicesArray = newServicesArray.filter( ( item: string ) => {
                 return item !== service;
             })
         }
 
-    }
+    };
 
     const router = useRouter();
 
     const handleSubmit = ( event: any ) => {
         event.preventDefault();
+        
+        let isError = false;
 
-        alert( 'Nombre: ' + data.name + '\nDuración: ' + data.duration + '\nFecha: ' + data.year + '\nImagen del proyecto: ' + data.image_project + '\nImagen de la empresa: ' + data.image_company + '\nServicios: ' + newServicesArray );
-        
-        const formData = new FormData();
-        formData.append('name', data.name);
-        formData.append('duration', data.duration);
-        formData.append('year', data.year);
-        formData.append('image_project', data.image_project);
-        formData.append('image_company', data.image_company);
-        formData.append('services', newServicesArray.join(', '));
+        if ( isErrorState === true ) {
+            isError = true;
+        }
 
-        /* for ( let entry of formData.entries() ) {
-            console.log( entry );
-        } */
-        
-        fetch('http://localhost:3030/admin/crear', {
-            method: "POST",
-            body: formData,
-        })
-            .then(response => {
-                return response.json()
-            });
-        
-        event.target.reset();
-        router.push('/proyectos')
+        let errors: any = {};
+
+        if ( !data.name.trim() ) {
+            errors.name = 'El campo "Nombre de empresa" no debe estar vacío';
+            isError = true;
+        }
+
+        if ( !data.duration.trim() ) {
+            errors.duration = 'El campo "Tiempo de duración" no debe estar vacío';
+            isError = true;
+        }
+
+        if ( !data.year.trim() ) {
+            errors.year = 'El campo "Fecha del proyecto" no debe estar vacío';
+            isError = true;
+        }
+
+        if ( !data.image_project ) {
+            errors.image_project = 'Debe subir una imagen en el campo "Imagen del proyecto"';
+            isError = true;
+        }
+
+        if ( !data.image_company ) {
+            errors.image_company = 'Debe subir una imagen en el campo "Imagen de la empresa"';
+            isError = true;
+        }
+
+        if ( !newServicesArray.join(', ').trim() && !data.services.trim() ) {
+            errors.services = 'Debe seleccionar una opción en el campo "Servicios ofrecidos"';
+            isError = true;
+        }
+
+        if ( !isError ) {
+
+            if ( data.services ) {
+                newServicesArray = data.services;
+            }
+
+            alert( 'Nombre: ' + data.name + '\nDuración: ' + data.duration + '\nFecha: ' + data.year + '\nImagen del proyecto: ' + data.image_project + '\nImagen de la empresa: ' + data.image_company + '\nServicios: ' + ( data.services ? data.services : newServicesArray ) );
+            
+            const formData = new FormData();
+            formData.append('name', data.name);
+            formData.append('duration', data.duration);
+            formData.append('year', data.year);
+            formData.append('image_project', data.image_project);
+            formData.append('image_company', data.image_company);
+            formData.append('services', data.services ? data.services : newServicesArray.join(', '));
+            
+            fetch('http://localhost:3030/admin/crear', {
+                method: "POST",
+                body: formData,
+            })
+                .then(response => {
+                    return response.json()
+                });
+            
+            event.target.reset();
+            router.push('/proyectos');
+        } else {
+            setIsErrorState( true );
+            setErrorsState( errors );
+
+            setData({
+                ...data,
+                services: newServicesArray.join(', ')
+            })
+        }
+
     }
 
     return (
@@ -115,35 +282,44 @@ export const BodyCreateProject: FC = () => {
                 <Grid container spacing={ 2 } sx={{ marginBottom: '1.5rem' }}>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <CssTextField id='custom-css-filled-input' name='name' label='Nombre de empresa' variant='filled' onChange={ handleInputChange } />
+                        <CssTextField error={ errorsState.name } id='custom-css-filled-input' name='name' label='Nombre de empresa' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.name } />
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <CssTextField id='custom-css-filled-input' name='duration' label='Tiempo de duración' variant='filled' onChange={ handleInputChange } />
+                        <CssTextField error={ errorsState.duration } id='custom-css-filled-input' name='duration' label='Tiempo de duración' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.duration } />
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <CssTextField id='custom-css-filled-input' name='year' label='Fecha del proyecto' variant='filled' onChange={ handleInputChange } />
+                        <CssTextField error={ errorsState.year } id='custom-css-filled-input' name='year' label='Fecha del proyecto' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.year } />
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
                         <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen del proyecto</Typography>
-                        <Input id='custom-css-filled-input' type='file' name='image_project' sx={{ width: '100%' }} onChange={ handleInputChange } />
+                        <Input error={ errorsState.image_project } id='custom-css-filled-input' type='file' name='image_project' sx={{ width: '100%' }} onChange={ handleInputChange } onBlur={ handleInputBlur } />
+                        { errorsState.image_project && <div className={ styles['alert-error-input-file'] }>{ errorsState.image_project }</div> }
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
                         <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen de la empresa</Typography>
-                        <Input id='custom-css-filled-input' type='file' name='image_company' sx={{ width: '100%' }} onChange={ handleInputChange } />
+                        <Input error={ errorsState.image_company } id='custom-css-filled-input' type='file' name='image_company' sx={{ width: '100%' }} onChange={ handleInputChange } onBlur={ handleInputBlur } />
+                        { errorsState.image_company && <p className={ styles['alert-error-input-file'] }>{ errorsState.image_company }</p> }
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
                         <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Servicios ofrecidos</Typography>
-                        <FormGroup>
-                            <FormControlLabel control={<Checkbox color='secondary' name='services' value='instalacion' />} label='Instalación' onChange={ handleCheckboxChange } />
-                            <FormControlLabel control={<Checkbox color='secondary' name='services' value='mantenimiento' />} label='Mantenimiento y reparación' onChange={ handleCheckboxChange } />
-                            <FormControlLabel control={<Checkbox color='secondary' name='services' value='automatizacion' />} label='Automatización' onChange={ handleCheckboxChange } />
-                            <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' />} label='Suministro' onChange={ handleCheckboxChange } />
-                        </FormGroup>
+                        <FormControl
+                            error={ errorsState.services }
+                            variant="outlined"
+                        >
+                            <FormGroup>
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='instalacion' />} label='Instalación' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='mantenimiento' />} label='Mantenimiento y reparación' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='automatizacion' />} label='Automatización' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox ref={ suministroCheckbox } color='secondary' name='services' value='suministro' />} label='Suministro' onChange={ handleCheckboxChange } />
+                            </FormGroup>
+
+                            <FormHelperText>{ errorsState.services }</FormHelperText>
+                        </FormControl>
                     </Grid>
                 
                 </Grid>
