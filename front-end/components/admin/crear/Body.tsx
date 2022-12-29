@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { Box, Button, Checkbox, FormControlLabel, FormGroup, Grid, Input, TextField, Typography, styled, FormControl, FormHelperText } from '@mui/material';
@@ -50,8 +50,6 @@ export const BodyCreateProject: FC = () => {
 
     let [ isErrorState, setIsErrorState ] = useState( false );
 
-    let suministroCheckbox: any = useRef();
-
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, []);
@@ -77,10 +75,10 @@ export const BodyCreateProject: FC = () => {
         }
 
         if ( event.target.name === 'year' && !regexNumbers.test( event.target.value ) ) {
-            errors.year = 'El campo "Fecha del proyecto" solo acepta números';
+            errors.year = 'El campo "Año del proyecto" solo acepta números';
             isError = true;
         } else if ( event.target.name === 'year' && event.target.value.length !== 4 ) {
-            errors.year = 'El campo "Fecha del proyecto" debe tener 4 números';
+            errors.year = 'El campo "Año del proyecto" debe tener 4 números';
             isError = true;
         }
 
@@ -132,10 +130,10 @@ export const BodyCreateProject: FC = () => {
         }
 
         if ( event.target.name === 'year' && !regexNumbers.test( event.target.value ) ) {
-            errors.year = 'El campo "Fecha del proyecto" solo acepta números';
+            errors.year = 'El campo "Año del proyecto" solo acepta números';
             isError = true;
         } else if ( event.target.name === 'year' && event.target.value.length !== 4 ) {
-            errors.year = 'El campo "Fecha del proyecto" debe tener 4 números';
+            errors.year = 'El campo "Año del proyecto" debe tener 4 números';
             isError = true;
         }
 
@@ -206,7 +204,7 @@ export const BodyCreateProject: FC = () => {
         }
 
         if ( !data.year.trim() ) {
-            errors.year = 'El campo "Fecha del proyecto" no debe estar vacío';
+            errors.year = 'El campo "Año del proyecto" no debe estar vacío';
             isError = true;
         }
 
@@ -231,7 +229,7 @@ export const BodyCreateProject: FC = () => {
                 newServicesArray = data.services;
             }
 
-            alert( 'Nombre: ' + data.name + '\nDuración: ' + data.duration + '\nFecha: ' + data.year + '\nImagen del proyecto: ' + data.image_project + '\nImagen de la empresa: ' + data.image_company + '\nServicios: ' + ( data.services ? data.services : newServicesArray ) );
+            alert( 'Nombre: ' + data.name + '\nDuración: ' + data.duration + '\nAño: ' + data.year + '\nImagen del proyecto: ' + data.image_project + '\nImagen de la empresa: ' + data.image_company + '\nServicios: ' + ( data.services ? data.services : newServicesArray ) );
             
             const formData = new FormData();
             formData.append('name', data.name);
@@ -286,11 +284,11 @@ export const BodyCreateProject: FC = () => {
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <CssTextField error={ errorsState.duration } id='custom-css-filled-input' name='duration' label='Tiempo de duración' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.duration } />
+                        <CssTextField error={ errorsState.duration } id='custom-css-filled-input' name='duration' label='Tiempo de duración (en días)' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.duration } />
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <CssTextField error={ errorsState.year } id='custom-css-filled-input' name='year' label='Fecha del proyecto' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.year } />
+                        <CssTextField error={ errorsState.year } id='custom-css-filled-input' name='year' label='Año del proyecto' variant='filled' onChange={ handleInputChange } onBlur={ handleInputBlur } helperText={ errorsState.year } />
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
@@ -315,7 +313,7 @@ export const BodyCreateProject: FC = () => {
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='instalacion' />} label='Instalación' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='mantenimiento' />} label='Mantenimiento y reparación' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='automatizacion' />} label='Automatización' onChange={ handleCheckboxChange } />
-                                <FormControlLabel control={<Checkbox ref={ suministroCheckbox } color='secondary' name='services' value='suministro' />} label='Suministro' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' />} label='Suministro' onChange={ handleCheckboxChange } />
                             </FormGroup>
 
                             <FormHelperText>{ errorsState.services }</FormHelperText>
