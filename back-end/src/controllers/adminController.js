@@ -33,8 +33,12 @@ const adminController = {
             .then( project => {
 
                 db.Projects.update({
-                    ...req.body,
-                    image: req.file ? req.file.filename : project.image
+                    name: req.body.name,
+                    duration: req.body.duration,
+                    year: req.body.year,
+                    image_project: req.files ? req.files.image_project[0].filename : project.image_project,
+                    image_company: req.files ? req.files.image_company[0].filename : project.image_company,
+                    services: req.body.services
                 },{
                     where: {
                         name: req.params.name
@@ -42,11 +46,11 @@ const adminController = {
                 })
 
             })
-                .then(() => {
-                    res.redirect('/projects');
+                .then( res => {
+                    res.send( res );
                 })
-                .catch(e => {
-                    res.send(e)
+                .catch( e => {
+                    res.send( e )
                 })
       
     }
