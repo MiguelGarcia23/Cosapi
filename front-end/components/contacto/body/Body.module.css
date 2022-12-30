@@ -17,7 +17,7 @@
 }
 
 /* Caja del botón del formulario */
-.contact-form-button-container {
+.contact-form-button-box {
     display: flex;
     justify-content: center;
 }
@@ -86,7 +86,7 @@
     }
 
     /* Caja del botón del formulario */
-    .contact-form-button-container {
+    .contact-form-button-box {
         justify-content: flex-end;
     }
 
