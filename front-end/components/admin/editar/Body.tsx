@@ -333,8 +333,9 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
                             <FormGroup>
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='instalacion' defaultChecked={ data.services.includes( 'instalacion' ) ? true : false } />} label='Instalación' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='mantenimiento' defaultChecked={ data.services.includes( 'mantenimiento' ) ? true : false } />} label='Mantenimiento y reparación' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='calibracion' defaultChecked={ data.services.includes( 'calibracion' ) ? true : false } />} label='Calibración' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='automatizacion' defaultChecked={ data.services.includes( 'automatizacion' ) ? true : false } />} label='Automatización' onChange={ handleCheckboxChange } />
-                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' defaultChecked={ data.services.includes( 'suministro' ) ? true : false } />} label='Suministro' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' defaultChecked={ data.services.includes( 'suministro' ) ? true : false } />} label='Suministro y alquiler' onChange={ handleCheckboxChange } />
                             </FormGroup>
 
                             <FormHelperText>{ errorsState.services }</FormHelperText>

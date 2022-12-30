@@ -312,8 +312,9 @@ export const BodyCreateProject: FC = () => {
                             <FormGroup>
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='instalacion' />} label='Instalación' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='mantenimiento' />} label='Mantenimiento y reparación' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='calibracion' />} label='Calibración' onChange={ handleCheckboxChange } />
                                 <FormControlLabel control={<Checkbox color='secondary' name='services' value='automatizacion' />} label='Automatización' onChange={ handleCheckboxChange } />
-                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' />} label='Suministro' onChange={ handleCheckboxChange } />
+                                <FormControlLabel control={<Checkbox color='secondary' name='services' value='suministro' />} label='Suministro y alquiler' onChange={ handleCheckboxChange } />
                             </FormGroup>
 
                             <FormHelperText>{ errorsState.services }</FormHelperText>
