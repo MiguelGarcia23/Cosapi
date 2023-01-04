@@ -40,11 +40,6 @@ export const MenuServicesNavbarDesktop: FC = () => {
                     <Typography variant='h2' color='info.main'>Ejecución</Typography>
                 </Grid>
 
-                {/* <svg width={ 2000 } height={ 1000 } style={{ position: 'absolute', zIndex: 100 }}>
-                    <path d="M 280 250 Q 480 120  740 250 T 1250 270"
-                        stroke="white" stroke-dasharray="10" stroke-width={ 4 } fill='transparent' />
-                </svg> */}
-
             </Grid>
 
             

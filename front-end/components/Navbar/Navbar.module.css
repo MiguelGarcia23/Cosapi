@@ -113,6 +113,64 @@
     margin-bottom: 1.5rem !important;
 }
 
+/* Slide menú de la versión Mobile */
+.slide-menu-mobile {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-color: #2E2E2F;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Links del slide menú de la versión mobile */
+.link-navbar-mobile {
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    border-bottom: 1px solid white;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Menú desplegable de Servicios mobile */
+.navbar-menu-services-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    z-index: 99;
+}
+
+/* Ítems del menú desplegable de Servicios mobile */
+.navbar-menu-services-item-mobile {
+    width: 100%;
+    height: 33%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid white;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer;
+}
+
+/* Número de cada ítem del menú de Servicios */
+.navbar-menu-services-item-number-mobile {
+    display: block !important;
+    font-size: 1.5rem !important;
+    font-weight: 900 !important;
+    padding: 0.125rem 0.875rem !important;
+    border-radius: 50% !important;
+    background-color: #0184EF !important;
+    margin-bottom: 1.5rem !important;
+}
+
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
 
 /* Media queries versión Desktop */

@@ -15,6 +15,7 @@
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
+    "@mui/styles": "^5.11.2",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
     "axios": "^1.2.1",
