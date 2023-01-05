@@ -1,0 +1,66 @@
+/* Body de la página */
+.not-found-body {
+    padding: 2rem 0;
+}
+
+/* Caja del título, subtítulo y botón */
+.not-found-box-info {
+    padding: 0 2rem;
+}
+
+/* Título de la página */
+.not-found-title {
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
+}
+
+/* Subtítulo de la página */
+.not-found-subtitle {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+}
+
+/* Imagen de la página */
+.not-found-img {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Body de la página */
+    .not-found-body {
+        padding: 3.75rem 0;
+    }
+
+    /* Caja del título, subtítulo y botón */
+    .not-found-box-info {
+        padding: 0 5rem;
+    }
+
+    /* Título de la página */
+    .not-found-title {
+        font-size: 3.75rem !important;
+    }
+
+    /* Subtítulo de la página */
+    .not-found-subtitle {
+        font-size: 1.5rem !important;
+        margin-bottom: 4rem !important;
+    }
+
+    /* Imagen de la página */
+    .not-found-img {
+        width: 100%;
+        height: 320px;
+        position: relative;
+    }
+}
