@@ -25,7 +25,7 @@ export const CardService: FC<Props> = ({ title }) => {
                 <CardActionArea sx={{ height: '100%' }}>
 
                     <CardContent>
-                        <Typography variant='h5' color="info.dark" sx={{ marginBottom: '2rem' }}>{ title }</Typography>
+                        <Typography variant='h4' color="info.dark" sx={{ marginBottom: '2rem' }}>{ title }</Typography>
                         <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                             <ArrowForwardIcon fontSize='large' />                        
                         </Box>

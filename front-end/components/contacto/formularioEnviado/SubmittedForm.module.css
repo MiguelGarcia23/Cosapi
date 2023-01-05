@@ -1,0 +1,40 @@
+/* Body de la página */
+.submitted-form-body {
+    padding: 2rem;
+}
+
+/* Título de la página */
+.submitted-form-title {
+    font-size: 2.5rem !important;
+    font-weight: 900 !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* Subtítulo de la página */
+.submitted-form-subtitle {
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Body de la página */
+    .submitted-form-body {
+        padding: 3.75rem 5rem;
+    }
+
+    /* Título de la página */
+    .submitted-form-title {
+        font-size: 3.75rem !important;
+    }
+
+    /* Subtítulo de la página */
+    .submitted-form-subtitle {
+        font-size: 1.5rem !important;
+        margin-bottom: 5rem !important;
+    }
+}

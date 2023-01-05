@@ -25,6 +25,7 @@ export const Layout: FC<Props> = ({ children, title }) => {
                 <meta property='og:title' content={`Información sobre Cosapi ${ '- ' + title || null }`} />
                 <meta property='og:description' content={`Esta es la página sobre Cosapi ${ '- ' + title || null }`}/>
                 <meta property='og:image' content={`${ origin }/main-banner.png`} />
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
             </Head>
     
             <Navbar />

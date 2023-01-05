@@ -145,7 +145,7 @@ export const FormContact: FC = () => {
     
             event.target.reset();
     
-            router.push('/');
+            router.push('/contacto/formularioEnviado');
 
         } else {
             setIsErrorState( true );

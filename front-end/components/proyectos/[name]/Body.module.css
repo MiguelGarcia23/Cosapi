@@ -40,6 +40,7 @@
 /* Cada tarjeta de servicio */
 .project-service-card {
     background-color: white;
+    min-width: 18.75rem;
     max-width: 26.5625rem;
     height: 180px;
     margin: 0 auto !important;
@@ -98,6 +99,7 @@
 
     /* Cada tarjeta de servicio */
     .project-service-card {
+        min-width: 0;
         max-width: 40rem;
     }
 
