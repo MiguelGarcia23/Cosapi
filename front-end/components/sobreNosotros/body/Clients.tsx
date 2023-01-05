@@ -28,29 +28,38 @@ export const ClientsAboutUs: FC = () => {
 
             <Box className={ styles['about-us-clients-images'] }>
 
-                <Box sx={{ marginRight: '1rem' }}>
+                <Box>
                     <Image 
-                        src='/logo-pdvsa.svg'
+                        src='/logo-pdvsa.png'
                         alt='Logo de PDVSA'
-                        width={ 255 }
-                        height={ 100 }
-                    />
-                </Box>
-
-                <Box sx={{ marginRight: '1rem' }}>
-                    <Image 
-                        src='/logo-pdvsa.svg'
-                        alt='Logo de PDVSA'
-                        width={ 255 }
+                        width={ 230 }
                         height={ 100 }
                     />
                 </Box>
 
                 <Box>
                     <Image 
-                        src='/logo-pdvsa.svg'
-                        alt='Logo de PDVSA'
-                        width={ 255 }
+                        src='/logo-venequip.png'
+                        alt='Logo de Venequip'
+                        width={ 230 }
+                        height={ 100 }
+                    />
+                </Box>
+
+                <Box>
+                    <Image 
+                        src='/logo-repsol.png'
+                        alt='Logo de Repsol'
+                        width={ 230 }
+                        height={ 100 }
+                    />
+                </Box>
+
+                <Box>
+                    <Image 
+                        src='/logo-vepica.png'
+                        alt='Logo de Vepica'
+                        width={ 230 }
                         height={ 100 }
                     />
                 </Box>

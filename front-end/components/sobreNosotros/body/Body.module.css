@@ -10,6 +10,12 @@
     margin-bottom: 3.75rem;
 }
 
+/* Párrafos de intro de la página */
+.about-us-intro-paragraph {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+
 /* Imagen de intro a la página */
 .about-us-intro-img {
     background-image: url('/building-cosapi.png');
@@ -53,7 +59,8 @@
 .about-us-clients-images {
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-bottom: 3.75rem;
 }
 
@@ -91,6 +98,12 @@
 
 /* Media queries versión Desktop */
 @media (min-width: 1050px){
+    
+    /* Párrafos de intro de la página */
+    .about-us-intro-paragraph {
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+    }
 
     /* Texto sobre la imagen de intro de la página */
     .about-us-intro-text {
