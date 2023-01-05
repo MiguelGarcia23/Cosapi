@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-    padding: 2.5rem 6.25rem;
+    padding: 2.5rem;
     background-color: black;
 }
 
@@ -25,4 +25,15 @@
 
 .footer-link:hover {
     opacity: 0.5;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Desktop */
+@media (min-width: 1050px){
+
+    /* Footer */
+    .footer {
+        padding: 2.5rem 6.25rem;
+    }
 }
