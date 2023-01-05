@@ -35,6 +35,14 @@ export const BodyExecution: FC = () => {
                 />
 
                 <CardServicesExecution 
+                    title= 'Calibración de instrumentos'
+                    info= 'Contamos con los conocimientos necesarios para calibrar y mantener tus equipos en el mejor estado posible, además, tenemos bancos de prueba y herramientas de alta tecnología para asegurarnos de entregar resultados excelentes.'
+                    link= '/servicios/ejecucion/calibracion'
+                    img= '/execution-calibration.jpg'
+                    alt= 'Imagen de calibracion de instrumentos'
+                />
+
+                <CardServicesExecution 
                     title= 'Automatización de equipos y sistemas'
                     info= 'Te ayudamos a mejorar la eficiencia de tus sistemas de control y operaciones ofreciendo equipos innovadores y confiables para optimizar el manejo de tu planta de producción.'
                     link= '/servicios/ejecucion/automatizacion'
@@ -43,10 +51,10 @@ export const BodyExecution: FC = () => {
                 />
 
                 <CardServicesExecution 
-                    title= 'Suministro de equipos y personal especializado'
+                    title= 'Alquiler de equipos y suministro de personal especializado'
                     info= 'Ponemos a tu alcance equipos de última tecnología que te ayudarán a obtener los mejores resultados en tu proyecto, de la mano de personal capacitado con años de experiencia en el mercado seleccionados según tus necesidades'
                     link= '/servicios/ejecucion/suministro'
-                    img= '/execution-supplies.png'
+                    img= '/execution-supplies.jpg'
                     alt= 'Imagen de suministro de equipos y personal especializado'
                 />
 

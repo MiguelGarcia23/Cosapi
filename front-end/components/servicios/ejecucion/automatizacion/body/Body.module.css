@@ -1,0 +1,35 @@
+/* Body de la página */
+.automation-body {
+    background-color: white;
+    padding: 5rem 0;
+}
+
+/* Título de intro a la página */
+.automation-intro-title {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-bottom: 1.25rem !important;
+}
+
+/* Link del título de intro a la página */
+.automation-intro-subtitle {
+    display: block !important;
+    margin: 0 auto !important;
+    font-weight: 700 !important; 
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Título de intro a la página */
+    .automation-intro-title {
+        width: 85% !important;
+    }
+
+    /* Link del título de intro a la página */
+    .automation-intro-subtitle {
+        width: 85% !important;
+    }
+}

@@ -3,7 +3,7 @@
     height: 50vh;
     background-image: url('/installation-banner.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
     background-size: cover;
     padding: 0 3rem;
     display: flex;
