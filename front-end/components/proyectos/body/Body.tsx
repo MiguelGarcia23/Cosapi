@@ -18,7 +18,7 @@ export const BodyProjects: FC<Props> = ({ projects }) => {
 
         <Box className={ styles['projects-body'] }>
 
-            <Box sx={{ marginBottom: '3.75rem' }}>
+            {/* <Box sx={{ marginBottom: '3.75rem' }}>
                 <Typography variant='h4' color='info.dark' fontWeight={ 500 }>
                     Nuestros
                 </Typography>
@@ -26,7 +26,7 @@ export const BodyProjects: FC<Props> = ({ projects }) => {
                 <Typography variant='h2' color='info.dark' sx={{ textAlign: 'left', marginBottom: '3.75rem' }}>
                     Proyectos
                 </Typography>
-            </Box>
+            </Box> */}
 
             <Grid container spacing={ 2 }>
 
