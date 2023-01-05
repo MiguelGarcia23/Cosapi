@@ -37,13 +37,10 @@ export const InfoContact: FC = () => {
                         <PhoneInTalk fontSize='large' sx={{ display: 'block', margin: '0 auto', marginBottom: '1.25rem' }} />
                         <Typography variant='h3' color='info.dark' sx={{ marginBottom: '0.75rem', textAlign: 'center' }}>Teléfono</Typography>
                         <Typography variant='body2' color='info.dark' sx={{ marginBottom: '0.5rem', textAlign: 'center' }}>
-                            +584161234567
-                        </Typography>
-                        <Typography variant='body2' color='info.dark' sx={{ marginBottom: '0.5rem', textAlign: 'center' }}>
-                            +584161234567
+                            0414-7658324
                         </Typography>
                         <Typography variant='body2' color='info.dark' sx={{ textAlign: 'center' }}>
-                            +584161234567
+                            0412-0815310
                         </Typography>
 
                     </Box>
@@ -52,8 +49,11 @@ export const InfoContact: FC = () => {
 
                         <Email fontSize='large' sx={{ display: 'block', margin: '0 auto', marginBottom: '1.25rem' }} />
                         <Typography variant='h3' color='info.dark' sx={{ marginBottom: '0.75rem', textAlign: 'center' }}>Email</Typography>
+                        <Typography variant='body2' color='info.dark' sx={{ marginBottom: '0.5rem', textAlign: 'center' }}>
+                            hcardenas@cosapi.com.ve
+                        </Typography>
                         <Typography variant='body2' color='info.dark' sx={{ textAlign: 'center' }}>
-                            cosapi@gmail.com
+                            vcarrion@cosapi.com.ve
                         </Typography>
 
                     </Box>

@@ -52,13 +52,13 @@ export const Footer: FC = () => {
                         <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
                             <PhoneInTalk color='info' sx={{ marginRight: '0.625rem'}} />
                             <Typography variant='body2' color='info.main'>
-                                +584161234567
+                                0414-7658324
                             </Typography>
                         </Box>
                         <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
                             <Email color='info' sx={{ marginRight: '0.625rem'}} />
                             <Typography variant='body2' color='info.main'>
-                                cosapi@gmail.com
+                                hcardenas@cosapi.com.ve
                             </Typography>
                         </Box>
                         <Box sx={{ display: 'flex', marginBottom: '1rem' }}>
