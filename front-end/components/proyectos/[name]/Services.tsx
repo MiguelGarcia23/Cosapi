@@ -13,6 +13,29 @@ interface Props {
 
 export const ServicesProject: FC<Props> = ({ services }) => {
 
+    let newArrayServices: string[] = [];
+    
+    services.forEach( service => {
+
+        switch ( service ) {
+            case 'instalacion':
+                newArrayServices.push('Instalación de equipos');
+                break;
+            case 'mantenimiento':
+                newArrayServices.push('Mantenimiento y reparación de equipos');
+                break;
+            case 'calibracion':
+                newArrayServices.push('Calibración de instrumentos');
+                break;
+            case 'automatizacion':
+                newArrayServices.push('Automatización de equipos y sistemas');
+                break;
+            default:
+                newArrayServices.push('Alquiler de equipos y suministro de personal especializado');
+                break;
+        }
+    })
+
     return (
 
         <Box className={ styles['project-services'] }>
@@ -25,12 +48,12 @@ export const ServicesProject: FC<Props> = ({ services }) => {
 
                 <>
                     {
-                        services.map( ( service, i ) => {
+                        newArrayServices.map( ( service, i ) => {
 
                             return(
                                 <CardService 
                                     key= { i }
-                                    title= {`${ service.charAt(0).toUpperCase() + service.slice(1) } de válvulas de seguridad y alivio`}
+                                    title= { service }
                                 />
                             )
 
