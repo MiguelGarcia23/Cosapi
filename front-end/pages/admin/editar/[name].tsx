@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { Box } from '@mui/material';
 
+import authenticatedRoute from '../../../auth/AuthenticatedRoute';
 import { backend } from '../../../backend';
 import { Project, ProjectListResponse } from '../../../interfaces';
 import { getProjectInfo } from '../../../utils';

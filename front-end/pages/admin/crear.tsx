@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import { Box } from '@mui/material';
 
+import authenticatedRoute from '../../auth/AuthenticatedRoute';
 import { Layout } from '../../components/layouts';
 import { BodyCreateProject } from '../../components/admin';
 
@@ -23,4 +24,4 @@ const CreateProjectPage: FC = () => {
     )
 }
 
-export default CreateProjectPage;
+export default authenticatedRoute( CreateProjectPage )
