@@ -1,0 +1,57 @@
+/* Contenedor nuestros servicios populares */
+.main-infrastructure {
+    padding: 5rem 0 2.5rem 0;
+}
+
+/* Cada tarjeta de la sección Infraestructura */
+.infrastructure-card {
+    max-width: 425px;
+    height: 470px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0.625rem;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-active {
+    background-color: #0184EF;
+    max-width: 425px;
+    height: 470px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0.625rem;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-inactive {
+    background-color: #2E2E2F;
+    max-width: 425px;
+    height: 470px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 0.625rem;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* -------------------------------- MEDIA QUERIES ------------------------------- */
+
+/* Media queries versión Tablet */
+@media (min-width: 768px){
+
+    /* Cada tarjeta de la sección Infraestructura */
+    .infrastructure-card {
+        margin-bottom: 0;
+    }
+}
