@@ -1,6 +1,7 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-import { Box } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 import { Project } from '../../../interfaces';
 import { IntroProject } from './Intro';
@@ -16,9 +17,27 @@ interface Props {
 
 export const BodyProject: FC<Props> = ({ project }) => {
 
+    let [ storage, setStorage ] = useState( '' );
+
+    const router = useRouter();
+
+    useEffect(() => {
+        setStorage( localStorage.getItem('auth') || "" );
+    }, [])
+
+    const handleClick = () => {
+        router.push(`/admin/editar/${ project.name }`)
+    }
+
     return (
         
         <Box className={ styles['project-body'] }>
+
+            { storage === 'true' && 
+                <Button variant='contained' color='secondary' style={{ display: 'block', padding: '0.625rem 1.25rem', borderRadius: '8px', margin: '0 auto', marginBottom: '1rem' }} onClick={ handleClick }>
+                    <Typography variant='h5' color='info.main' textTransform='capitalize'>Editar Proyecto</Typography>
+                </Button>  
+            }
 
             <IntroProject 
                 name= { project.name }
