@@ -295,7 +295,7 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen del proyecto</Typography>
+                        <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen del proyecto <em style={{ fontSize: '0.75rem', fontWeight: '400', color: '#FFDF00' }}>(Debe cargar de nuevo la imagen previa o una nueva imagen)</em></Typography>
                         <Box sx={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', marginBottom: '0.5rem' }}>
                             <Typography variant='body1' color='info.dark' sx={{ marginRight: '0.5rem' }}>Imagen previa: </Typography>
                             <Image 
@@ -310,7 +310,7 @@ export const BodyEditProject: FC<Props> = ({ project }) => {
                     </Grid>
 
                     <Grid item xs={ 12 } sm={ 12 } md={ 8 } sx={{ margin: '0 auto' }}>
-                        <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen de la empresa</Typography>
+                        <Typography variant='body1' fontWeight={ 700 } color='info.dark' sx={{ marginBottom: '0.5rem' }}>Imagen de la empresa <em style={{ fontSize: '0.75rem', fontWeight: '400', color: '#FFDF00' }}>(Debe cargar de nuevo la imagen previa o una nueva imagen)</em></Typography>
                         <Box sx={{ display: 'flex', flexWrap: 'nowrap', justifyContent: 'center', alignItems: 'center', marginBottom: '0.5rem' }}>
                             <Typography variant='body1' color='info.dark' sx={{ marginRight: '0.5rem' }}>Imagen previa: </Typography>
                             <Image 
