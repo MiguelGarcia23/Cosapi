@@ -1,4 +1,5 @@
 import { FC, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { Box, Button, Typography } from '@mui/material';
 import AOS from 'aos';
@@ -11,6 +12,12 @@ export const FooterInstallation: FC = () => {
         AOS.init({ duration: 2000 })
     }, [])
 
+    let router = useRouter();
+
+    const handleClick = () => {
+        router.push('/contacto')
+    }
+
     return (
 
         <Box data-aos='fade-up' sx={{ padding: '0 3.75rem' }}>
@@ -19,7 +26,7 @@ export const FooterInstallation: FC = () => {
                 ¿Listo para instalar tus equipos?
             </Typography>
 
-            <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }}>
+            <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }} onClick={ handleClick }>
                 <Typography variant='h5' color='info.main' textTransform='capitalize'>Solicitar presupuesto</Typography>
             </Button> 
 
