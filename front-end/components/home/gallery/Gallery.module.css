@@ -51,6 +51,7 @@
     /* Cada proyecto de la galería */
     .gallery-home-project{
         max-width: 640px;
+        height: 480px;
     }
 
     /* Info de cada proyecto de la galería */

@@ -42,8 +42,8 @@ export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
                     />
 
                     <CardContent className={ styles['projects-card-info'] }>
-                        <Typography variant='body1' color="info.main">{ year }</Typography>
-                        <Typography variant='h3' color="info.main">{ title }</Typography>
+                        <Typography variant='body1' color="info.main" sx={{ textShadow: '2px 2px 1px black' }}>{ year }</Typography>
+                        <Typography variant='h3' color="info.main" sx={{ textShadow: '2px 2px 1px black' }}>{ title }</Typography>
                     </CardContent>
 
                 </CardActionArea>

@@ -5,11 +5,17 @@ import { Box, Button, Typography, Grid } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { Project } from '../../../interfaces';
 import { CardGallery } from './CardGallery';
 
 import styles from './Gallery.module.css';
 
-export const Gallery: FC = () => {
+interface Props {
+    projects: Project[];
+}
+
+
+export const Gallery: FC<Props> = ({ projects }) => {
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
@@ -29,33 +35,21 @@ export const Gallery: FC = () => {
 
             <Grid container spacing={ 2 }>
 
-                <CardGallery 
-                    img='/petromonagas.png'
-                    alt='Imagen de Petromonagas'
-                    year='2020'
-                    title='Petromonagas'
-                />
+                {
+                    projects.map( ({ id, name, year, image_project }) => {
 
-                <CardGallery 
-                    img='/pdvsa-gas.png'
-                    alt='Imagen de PDVSA Gas'
-                    year='2021'
-                    title='PDVSA Gas'
-                />
+                        return(
+                            <CardGallery 
+                                key={ id } 
+                                img={ image_project }
+                                alt={`Imagen de ${ name }`}
+                                year={ year.toString() }
+                                title={ name }
+                            />
+                        )
 
-                <CardGallery 
-                    img='/petrosucre.png'
-                    alt='Imagen de Petrosucre'
-                    year='2020'
-                    title='Petrosucre'
-                />
-
-                <CardGallery 
-                    img='/petrodelta.png'
-                    alt='Imagen de Petrodelta'
-                    year='2021'
-                    title='Petrodelta'
-                />
+                    })
+                }
 
             </Grid>
 

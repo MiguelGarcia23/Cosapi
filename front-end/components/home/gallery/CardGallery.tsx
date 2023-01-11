@@ -25,17 +25,18 @@ export const CardGallery: FC<Props> = ({ img, alt, year, title }) => {
         <Grid item sm={ 12 } lg={ 6 }>
 
             <Card className={ styles['gallery-home-project'] } onClick={ handleClick }>
-                <CardActionArea sx={{ position: 'relative' }}>
+                <CardActionArea sx={{ position: 'relative', width: '100%', height: '100%' }}>
 
                     <CardMedia
                         component='img'
-                        image={ img }
+                        image={`http://localhost:3030/img/projects/${ img }`}
                         alt={ alt }
+                        sx={{ width: '100%', height: '100%' }}
                     />
 
                     <CardContent className={ styles['gallery-home-project-info'] }>
-                        <Typography variant='body1' color="info.main">{ year }</Typography>
-                        <Typography variant='h3' color="info.main">{ title }</Typography>
+                        <Typography variant='body1' color="info.main" sx={{ textShadow: '2px 2px 1px black' }}>{ year }</Typography>
+                        <Typography variant='h3' color="info.main" sx={{ textShadow: '2px 2px 1px black' }}>{ title }</Typography>
                     </CardContent>
 
                 </CardActionArea>
