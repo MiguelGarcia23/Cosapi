@@ -18,9 +18,9 @@ interface Props {
 
 export const CardMainServices: FC<Props> = ({ img, alt, subtitle, title, link }) => {
 
-    useEffect(() => {
+    /* useEffect(() => {
         AOS.init({ duration: 2000 })
-    }, [])
+    }, []) */
 
     const router = useRouter();
 
@@ -30,7 +30,7 @@ export const CardMainServices: FC<Props> = ({ img, alt, subtitle, title, link })
 
     return (
 
-        <Grid item sm={ 12 } md={ 6 } lg={ 4 } data-aos='zoom-out'>        
+        <Grid item sm={ 12 } md={ 6 } lg={ 4 }>        
             <Card sx={{ maxWidth: 425, margin: '0px auto' }} onClick={ handleClick }>
                 <CardActionArea>
                     <CardMedia

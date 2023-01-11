@@ -1,17 +1,23 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Grid } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { CardInfoAutomation } from './CardInfo';
 
 
 export const InfoAutomation: FC = () => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
+
     return (
 
         <Box sx={{ marginBottom: '3.75rem' }}>
 
-            <Grid container spacing={ 2 } sx={{ justifyContent: 'center', marginBottom: '2.5rem' }}>
+            <Grid container spacing={ 2 } sx={{ justifyContent: 'center', marginBottom: '2.5rem' }} data-aos='fade-up'>
 
                 <CardInfoAutomation 
                     img='/automatizacion/icono-productividad.png'

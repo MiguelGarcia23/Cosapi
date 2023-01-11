@@ -1,9 +1,7 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 
 import { Box, Card, CardContent, Grid, Typography } from '@mui/material';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 interface Props {
     img: string,
@@ -14,13 +12,9 @@ interface Props {
 
 export const CardInfoAutomation: FC<Props> = ({ img, alt, title, info }) => {
 
-    useEffect(() => {
-        AOS.init({ duration: 2000 })
-    }, [])
-
     return (
 
-        <Grid item sm={ 12 } md={ 6 } lg={ 4 } data-aos='zoom-out'>        
+        <Grid item sm={ 12 } md={ 6 } lg={ 4 }>        
             <Card sx={{ maxWidth: 350, height: 400, margin: '0px auto', backgroundColor: '#696A6C' }}>
                 <CardContent style={{ margin: '0 auto'}}>
                     <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>

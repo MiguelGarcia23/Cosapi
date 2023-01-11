@@ -1,6 +1,8 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Grid } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { CardEquipmentsInstallation } from './CardEquipment';
 
@@ -9,11 +11,15 @@ import styles from './Body.module.css';
 
 export const EquipmentsInstallation: FC = () => {
 
+  useEffect(() => {
+      AOS.init({ duration: 2000 })
+  }, [])
+
     return (
 
         <Box className={ styles['equipments-installation'] }>
 
-            <Grid container spacing={ 2 }>
+            <Grid container spacing={ 2 } data-aos='fade-up'>
               
               <CardEquipmentsInstallation 
                 img= '/equipos/separador-bifasico.png'

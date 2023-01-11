@@ -23,9 +23,9 @@ export const InfoProject: FC<Props> = ({ duration, image_company, year }) => {
 
     return (
         
-        <Grid container spacing={ 1 }>
+        <Grid container spacing={ 1 } data-aos='fade-up'>
 
-            <Grid item xs={ 12 } md={ 4 } data-aos='zoom-out'>
+            <Grid item xs={ 12 } md={ 4 }>
 
                 <Box className={ styles['project-info-container'] }>
                     <WatchLater sx={{ fontSize: '3.75rem', color: 'black' }} />
@@ -42,7 +42,7 @@ export const InfoProject: FC<Props> = ({ duration, image_company, year }) => {
 
             </Grid>
 
-            <Grid item xs={ 12 } md={ 4 } data-aos='zoom-out'>
+            <Grid item xs={ 12 } md={ 4 }>
 
                 <Box className={ styles['project-info-container'] }>
                     <Image 
@@ -56,7 +56,7 @@ export const InfoProject: FC<Props> = ({ duration, image_company, year }) => {
 
             </Grid>
 
-            <Grid item xs={ 12 } md={ 4 } data-aos='zoom-out'>
+            <Grid item xs={ 12 } md={ 4 }>
 
                 <Box className={ styles['project-info-container'] }>
                     <EventAvailable sx={{ fontSize: '3.75rem', color: 'black' }} />

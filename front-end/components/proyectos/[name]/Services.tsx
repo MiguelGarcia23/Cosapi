@@ -1,6 +1,8 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { Box, Grid, Typography } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { CardService } from './CardService';
 
@@ -12,6 +14,10 @@ interface Props {
 
 
 export const ServicesProject: FC<Props> = ({ services }) => {
+
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, [])
 
     let newArrayServices: string[] = [];
     
@@ -44,7 +50,7 @@ export const ServicesProject: FC<Props> = ({ services }) => {
                 Servicios ofrecidos
             </Typography>
 
-            <Grid container spacing={ 2 } className={ styles['project-services-cards'] }>
+            <Grid container spacing={ 2 } className={ styles['project-services-cards'] } data-aos='fade-up'>
 
                 <>
                     {

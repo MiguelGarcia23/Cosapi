@@ -1,8 +1,6 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 
 import { Card, CardMedia, CardContent, Grid, Typography } from '@mui/material';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 interface Props {
     img: string;
@@ -13,13 +11,9 @@ interface Props {
 
 export const CardEquipmentsCalibration: FC<Props> = ({ img, alt, subtitle, title }) => {
 
-    useEffect(() => {
-        AOS.init({ duration: 2000 })
-    }, [])
-
     return (
 
-        <Grid item xs={ 12 } md={ 6 } lg={ 4 } data-aos='zoom-out'>        
+        <Grid item xs={ 12 } md={ 6 } lg={ 4 }>        
             <Card sx={{ maxWidth: 300, margin: '0px auto', backgroundColor: 'transparent', border: 'none', boxShadow: 'none', borderRadius: '0' }}>
                 <CardMedia
                     component='img'

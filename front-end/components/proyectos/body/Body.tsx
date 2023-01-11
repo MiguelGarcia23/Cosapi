@@ -1,6 +1,8 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Project } from '../../../interfaces';
 import { CardProject } from './CardProject';
@@ -14,11 +16,15 @@ interface Props {
 
 export const BodyProjects: FC<Props> = ({ projects }) => {
 
+    useEffect(() => {
+        AOS.init({ duration: 2000 })
+    }, []);
+
     return (
 
         <Box className={ styles['projects-body'] }>
 
-            <Grid container spacing={ 2 }>
+            <Grid container spacing={ 2 } data-aos='fade-up'>
 
                 {
                     projects.map( ({ id, name, year, image_project }) => {
