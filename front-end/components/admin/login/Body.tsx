@@ -1,11 +1,12 @@
 import { FC, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { Box, Grid, Typography, TextField, styled, Button } from '@mui/material';
+import { Box, Grid, Typography, TextField, styled, Button, IconButton, InputAdornment } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import styles from './Body.module.css';
+import { VisibilityOff, Visibility } from '@mui/icons-material';
 
 const CssTextField = styled(TextField)({
     '& .MuiInputBase-input': {
@@ -41,6 +42,10 @@ export const BodyLoginAdmin: FC = () => {
     });
 
     let [ isErrorState, setIsErrorState ] = useState( false );
+
+    const [ showPassword, setShowPassword ] = useState( false );
+
+    const handleClickShowPassword = () => setShowPassword( ( show ) => !show );
 
     useEffect(() => {
         AOS.init({ duration: 2000 })
@@ -125,7 +130,25 @@ export const BodyLoginAdmin: FC = () => {
                         </Grid>
 
                         <Grid item xs={ 12 } sm={ 12 } md={ 6 }>
-                            <CssTextField error={ errorsState.password } id='custom-css-filled-input' type="password" name='password' label='Contraseña' variant='filled' helperText={ errorsState.password } onChange={ handleInput } />
+                            <CssTextField error={ errorsState.password } 
+                                id='custom-css-filled-input' 
+                                type={ showPassword ? 'text' : 'password' } 
+                                name='password' 
+                                label='Contraseña' 
+                                variant='filled'
+                                InputProps={{
+                                    endAdornment:
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                aria-label="toggle password visibility"
+                                                onClick={ handleClickShowPassword }
+                                                edge="end"
+                                            >
+                                                { showPassword ? <VisibilityOff /> : <Visibility /> }
+                                            </IconButton>
+                                        </InputAdornment>
+                                }}
+                                helperText={ errorsState.password } onChange={ handleInput } />
                         </Grid>
                     
                     </Grid>

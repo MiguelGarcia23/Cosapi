@@ -4,45 +4,32 @@
 }
 
 /* Cada tarjeta de la sección Infraestructura */
-.infrastructure-card {
-    max-width: 425px;
-    height: 470px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 0.625rem;
-    padding-top: 2.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .card-active {
-    background-color: #0184EF;
-    max-width: 425px;
-    height: 470px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 0.625rem;
-    padding-top: 2.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #0184EF !important;
+    max-width: 425px !important;
+    height: 470px !important;
+    margin: 0 auto !important;
+    margin-bottom: 1rem !important;
+    padding: 0.625rem !important;
+    padding-top: 2.5rem !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 .card-inactive {
-    background-color: #2E2E2F;
-    max-width: 425px;
-    height: 470px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 0.625rem;
-    padding-top: 2.5rem;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: #2E2E2F !important;
+    max-width: 425px !important;
+    height: 470px !important;
+    margin: 0 auto !important;
+    margin-bottom: 1rem !important;
+    padding: 0.625rem !important;
+    padding-top: 2.5rem !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
 }
 
 /* -------------------------------- MEDIA QUERIES ------------------------------- */
