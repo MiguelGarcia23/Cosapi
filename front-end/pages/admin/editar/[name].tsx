@@ -71,5 +71,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
 }
 
-/* export default EditProjectPage; */
 export default authenticatedRoute( EditProjectPage );
