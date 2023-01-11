@@ -7,7 +7,7 @@ const router = express.Router();
 /* Importamos el controlador de contacto */
 const contactController = require ('../controllers/contactController');
 
-/* Configuramos el envío a la vista de contacto */
+/* Configuramos el envío del correo */
 router.post ('/', contactController.sendMessage);
 
 /* Exportamos la variable router */

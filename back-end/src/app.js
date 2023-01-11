@@ -13,14 +13,8 @@ const methodOverride = require('method-override');
 /* Importando el módulo de cors */
 const cors = require('cors');
 
-/* Importado el módulo nativo path en la variable path */
-/* const path = require('path'); */
-
 /* Guardando en la variable app la ejecución de la función Express */
 const app = express();
-
-/* Importando el middleware de usuario logueado */
-/* const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware') */
 
 /* Estableciendo las configuraciones de cors */
 const corsOptions ={
@@ -41,9 +35,6 @@ app.use(session({
 
 /* Ejecutando el módulo de cookies */
 app.use(cookies());
-
-/* Aplicando el middleware global de usuario logueado */
-/* app.use(userLoggedMiddleware); */
 
 /* Usamos el methodOverride */
 app.use(methodOverride('_method'));
@@ -72,12 +63,6 @@ app.use ('/contacto', contactRouter);
 
 /* Envío a la ruta de admin */
 app.use ('/admin', adminRouter);
-
-/* Error 404 */
-/* app.use((req, res, next) => {
-  res.status(404).render('404-page');
-  next()
-}) */
 
 /* Levantando el servidor */
 app.listen(process.env.PORT || 3030, () => {

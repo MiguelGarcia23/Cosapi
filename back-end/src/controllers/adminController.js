@@ -19,7 +19,6 @@ const adminController = {
             .catch( e => {
                 res.send( e )
             })
-            /* console.log( req.body ); */
       
     },
 

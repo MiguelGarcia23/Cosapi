@@ -8,18 +8,17 @@ const router = express.Router();
 const adminController = require ('../controllers/adminController');
 
 /* Importamos el middleware Multer */
-const multerMiddlewareProject = require('../middlewares/uploadProject');
-/* const multerMiddlewareCompany = require('../middlewares/uploadCompany'); */
+const multerMiddleware = require('../middlewares/uploadImage');
 
-/* Configuramos el envío a la vista de creación de proyecto */
-router.post ('/crear', multerMiddlewareProject.fields([{
+/* Configuramos la ruta de creación de proyecto */
+router.post ('/crear', multerMiddleware.fields([{
     name: 'image_project', maxCount: 1
 }, {
     name: 'image_company', maxCount: 1
 }]), adminController.create);
 
-/* Configuramos el envío a la vista de edición de proyecto */
-router.post ('/editar/:name', multerMiddlewareProject.fields([{
+/* Configuramos la ruta de edición de proyecto */
+router.post ('/editar/:name', multerMiddleware.fields([{
     name: 'image_project', maxCount: 1
 }, {
     name: 'image_company', maxCount: 1
