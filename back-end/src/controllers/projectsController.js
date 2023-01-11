@@ -34,6 +34,39 @@ const projectsController = {
 
     },
 
+    favoriteProjects: ( req, res ) => {
+
+        db.Projects.findAll({
+            limit: 4
+        })
+            .then(( projects ) => {
+
+                let finalProjects = projects.map( project => {
+                    return (
+                        {
+                            id: project.id,
+                            name: project.name,
+                            duration: project.duration,
+                            year: project.year,
+                            image_project: project.image_project,
+                            image_company: project.image_company,
+                            services: project.services.split(', ')
+                        }
+                    )
+                })
+
+                res.status(200).json({
+                    projects: finalProjects,
+                    status: 200,
+                });
+
+            })
+            .catch((e) => {
+                res.send(e)
+            })
+
+    },
+
     projectDetail: ( req, res ) => {
 
         db.Projects.findOne({
