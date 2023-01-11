@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import { Box, Button, Typography } from '@mui/material';
 import AOS from 'aos';
@@ -12,6 +13,12 @@ export const MachinesDiagnostic: FC = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
+
+    let router = useRouter();
+
+    const handleClick = () => {
+        router.push('/contacto')
+    }
 
     return (
 
@@ -36,14 +43,14 @@ export const MachinesDiagnostic: FC = () => {
                 </Typography>
 
                 <Typography variant='body2' color='info.dark' sx={{ marginBottom: '2.5rem' }}>
-                    La identificación de estos problemas a tiempo permite idear soluciones para corregirlos antes de que sea demasiado tarde y poner a trabajar tus equipos de manera eficiente, llo que te permitirá ahorrar tanto tiempo como dinero.
+                    La identificación de estos problemas a tiempo permite idear soluciones para corregirlos antes de que sea demasiado tarde y poner a trabajar tus equipos de manera eficiente, lo que te permitirá ahorrar tanto tiempo como dinero.
                 </Typography>
 
                 <Typography variant='h4' color='info.dark' sx={{ marginBottom: '1rem' }}>
                     ¿Listo para optimizar tu maquinaria?
                 </Typography>
 
-                <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }}>
+                <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }} onClick={ handleClick }>
                   <Typography variant='h5' color='info.main' textTransform='capitalize'>Agendar reunión</Typography>
                 </Button>    
 

@@ -20,13 +20,13 @@ export const Footer: FC = () => {
                 <ItemFooter title='Nuestros servicios' large={ 3 }>
 
                     <>
-                        <NextLink href='/diagnostico' passHref>
+                        <NextLink href='/servicios/diagnostico' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diagnóstico</Link>
                         </NextLink>
-                        <NextLink href='/disenio' passHref>
+                        <NextLink href='/servicios/disenio' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Diseño</Link>
                         </NextLink>
-                        <NextLink href='/ejecucion' passHref>
+                        <NextLink href='/servicios/ejecucion' passHref>
                             <Link variant='body2' color='info.main' className={ styles['footer-link'] }>Ejecución</Link>
                         </NextLink>
                     </>

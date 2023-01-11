@@ -1,5 +1,6 @@
 import { FC, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import { Box, Button, Typography } from '@mui/material';
 import AOS from 'aos';
@@ -12,6 +13,12 @@ export const ClientsAboutUs: FC = () => {
     useEffect(() => {
         AOS.init({ duration: 2000 })
     }, [])
+
+    let router = useRouter();
+
+    const handleClick = () => {
+        router.push('/contacto')
+    }
 
     return (
 
@@ -70,7 +77,7 @@ export const ClientsAboutUs: FC = () => {
                 ¿Listo para convertirte en nuestro nuevo cliente?
             </Typography>
 
-            <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }}>
+            <Button variant='contained' color='secondary' style={{ padding: '0.625rem 1.25rem', borderRadius: '8px' }} onClick={ handleClick }>
                 <Typography variant='h5' color='info.main' textTransform='capitalize'>Solicitar presupuesto</Typography>
             </Button>  
 

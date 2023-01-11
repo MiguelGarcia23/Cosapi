@@ -31,7 +31,7 @@ export const InfoAutomation: FC = () => {
                     img='/automatizacion/icono-condiciones-trabajo.png'
                     alt='Imagen de condiciones de trabajo'
                     title='Mejorar las condiciones de trabajo'
-                    info='Elimina los procesos tediosos, riesgosos, con incremento de la seguridad laboral.'
+                    info='Elimina los procesos tediosos, riesgosos, con incremento de la seguridad laboral'
                 />
 
             </Grid>
