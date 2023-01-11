@@ -32,12 +32,13 @@ export const CardProject: FC<Props> = ({ img, alt, year, title }) => {
         <Grid item sm={ 12 } lg={ 6 } data-aos='zoom-out'>
 
             <Card className={ styles['projects-card'] } onClick={ handleClick }>
-                <CardActionArea sx={{ position: 'relative' }}>
+                <CardActionArea sx={{ position: 'relative', width: '100%', height: '100%' }}>
 
                     <CardMedia
                         component='img'
                         image={`http://localhost:3030/img/projects/${ img }`}
                         alt={ alt }
+                        sx={{ width: '100%', height: '100%' }}
                     />
 
                     <CardContent className={ styles['projects-card-info'] }>

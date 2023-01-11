@@ -1,6 +1,6 @@
 /* Body de la página */
 .projects-body {
-    padding: 5rem 3.75rem;
+    padding: 3rem 2rem;
 }
 
 /* Cada tarjeta de proyecto */
@@ -22,9 +22,15 @@
 /* Media queries versión Desktop */
 @media (min-width: 1050px){
 
+    /* Body de la página */
+    .projects-body {
+        padding: 5rem 3.75rem;
+    }
+
     /* Cada tarjeta de proyecto */
     .projects-card{
         max-width: 640px;
+        height: 480px;
     }
 
     /* Info de cada tarjeta de proyecto */
