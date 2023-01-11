@@ -25,7 +25,7 @@ export const MainServices: FC = () => {
                 <Grid container spacing={ 2 } sx={{ justifyContent: 'center' }}>
 
                     <CardMainServices 
-                        img='/projects.png'
+                        img='/home/disenio.png'
                         alt='Imagen de desarrollo de proyectos'
                         subtitle='Diseño'
                         title='Desarrollo de proyectos'
@@ -34,7 +34,7 @@ export const MainServices: FC = () => {
 
 
                     <CardMainServices 
-                        img='/installation.png'
+                        img='/execution/execution-installation.png'
                         alt='Imagen de instalación de equipos'
                         subtitle='Ejecución'
                         title='Instalación de equipos'
@@ -42,7 +42,7 @@ export const MainServices: FC = () => {
                     />
 
                     <CardMainServices 
-                        img='/equipment.png'
+                        img='/execution/execution-supplies.jpg'
                         alt='Imagen de suministro de equipos'
                         subtitle='Ejecución'
                         title='Suministro de equipos'

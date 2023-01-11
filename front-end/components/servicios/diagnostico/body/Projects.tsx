@@ -28,7 +28,7 @@ export const ProjectsDiagnostic: FC = () => {
 
             <Box className={ styles['diagnostic-projects-img']}>
                 <Image 
-                    src='/diagnostic-projects.png'
+                    src='/diagnostic/diagnostic-projects.png'
                     alt='Imagen de evaluación de proyectos'
                     layout='fill'
                 />
@@ -51,21 +51,21 @@ export const ProjectsDiagnostic: FC = () => {
                 <Grid container spacing={ 2 } sx={{ justifyContent: 'center', marginBottom: '2.5rem' }}>
 
                     <CardProjectsDiagnostic 
-                        img='/diagnostic-projects-number-1.svg'
+                        img='/diagnostic/diagnostic-projects-number-1.svg'
                         alt='Imagen de paso 1'
                         title='Reunión'
                         info='Tendrás una reunión con algunos de nuestros profesionales donde plantearás tus ideas. y podremos coordinar necesidades, tiempos y presupuesto'
                     />
 
                     <CardProjectsDiagnostic 
-                        img='/diagnostic-projects-number-2.svg'
+                        img='/diagnostic/diagnostic-projects-number-2.svg'
                         alt='Imagen de paso 2'
                         title='Diseño y planificación'
                         info='En base a tus ideas de proyecto y necesidades planteadas en la reunión, haremos una propuesta donde explicaremos los recursos necesarios para desarrollar el proyecto'
                     />
 
                     <CardProjectsDiagnostic 
-                        img='/diagnostic-projects-number-3.svg'
+                        img='/diagnostic/diagnostic-projects-number-3.svg'
                         alt='Imagen de paso 3'
                         title='Evaluación'
                         info='Una vez que comience el desarrollo del proyecto nuestros profesionales se encargaran de hacer un seguimiento y evaluaciones rutinarias para asegurarnos de que todo marche de la manera más eficiente posible'

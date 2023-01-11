@@ -18,7 +18,7 @@
 
 /* Imagen de intro a la página */
 .about-us-intro-img {
-    background-image: url('/building-cosapi.png');
+    background-image: url('/aboutUs/building-cosapi.png');
     width: 100%;
     height: 25rem;
     display: flex;

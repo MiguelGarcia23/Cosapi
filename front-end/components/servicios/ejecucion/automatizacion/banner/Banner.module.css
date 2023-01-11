@@ -1,7 +1,7 @@
 /* Banner principal */
 .automation-banner {
     height: 50vh;
-    background-image: url('/automation-banner.png');
+    background-image: url('/banners/automation-banner.png');
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;

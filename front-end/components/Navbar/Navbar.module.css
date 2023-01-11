@@ -87,19 +87,19 @@
 /* Ítem "Diagnóstico" */
 .navbar-menu-services-item-diagnosis {
     background-color: none;
-    background-image: url('/diagnosis-navbar.png');
+    background-image: url('/navbar/diagnosis-navbar.png');
 }
 
 /* Ítem "Diseño" */
 .navbar-menu-services-item-design {
     background-color: none;
-    background-image: url('/design-navbar.png');
+    background-image: url('/navbar/design-navbar.png');
 }
 
 /* Ítem "Ejecución" */
 .navbar-menu-services-item-execution {
     background-color: none;
-    background-image: url('/execution-navbar.png');
+    background-image: url('/navbar/execution-navbar.png');
 }
 
 /* Número de cada ítem del menú de Servicios */

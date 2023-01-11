@@ -1,7 +1,7 @@
 /* Banner principal */
 .calibration-banner {
     height: 50vh;
-    background-image: url('/calibration-banner.png');
+    background-image: url('/banners/calibration-banner.png');
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;

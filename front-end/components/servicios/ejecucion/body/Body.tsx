@@ -22,7 +22,7 @@ export const BodyExecution: FC = () => {
                     title= 'Instalación de equipos'
                     info= 'Instalar equipos que sean accesibles y seguros requiere tanto una estrategia inteligente como los productos correctos.'
                     link= '/servicios/ejecucion/instalacion'
-                    img= '/execution-installation.png'
+                    img= '/execution/execution-installation.png'
                     alt= 'Imagen de instalación de equipos'
                 />
 
@@ -30,7 +30,7 @@ export const BodyExecution: FC = () => {
                     title= 'Mantenimiento y reparación de equipos'
                     info= 'Puedes contar con nosotros para realizar cualquier tipo de mantenimiento, bien sea para optimizar el rendimiento y la calidad de tus equipos o para realizar reparaciones y corregir errores.'
                     link= '/servicios/ejecucion/mantenimiento'
-                    img= '/execution-maintenance.png'
+                    img= '/execution/execution-maintenance.png'
                     alt= 'Imagen de mantenimiento y reparación de equipos'
                 />
 
@@ -38,7 +38,7 @@ export const BodyExecution: FC = () => {
                     title= 'Calibración de instrumentos'
                     info= 'Contamos con los conocimientos necesarios para calibrar y mantener tus equipos en el mejor estado posible, además, tenemos bancos de prueba y herramientas de alta tecnología para asegurarnos de entregar resultados excelentes.'
                     link= '/servicios/ejecucion/calibracion'
-                    img= '/execution-calibration.jpg'
+                    img= '/execution/execution-calibration.jpg'
                     alt= 'Imagen de calibracion de instrumentos'
                 />
 
@@ -46,7 +46,7 @@ export const BodyExecution: FC = () => {
                     title= 'Automatización de equipos y sistemas'
                     info= 'Te ayudamos a mejorar la eficiencia de tus sistemas de control y operaciones ofreciendo equipos innovadores y confiables para optimizar el manejo de tu planta de producción.'
                     link= '/servicios/ejecucion/automatizacion'
-                    img= '/execution-automation.png'
+                    img= '/execution/execution-automation.png'
                     alt= 'Imagen de automatización de equipos y sistemas'
                 />
 
@@ -54,7 +54,7 @@ export const BodyExecution: FC = () => {
                     title= 'Alquiler de equipos y suministro de personal especializado'
                     info= 'Ponemos a tu alcance equipos de última tecnología que te ayudarán a obtener los mejores resultados en tu proyecto, de la mano de personal capacitado con años de experiencia en el mercado seleccionados según tus necesidades'
                     link= '/servicios/ejecucion/suministro'
-                    img= '/execution-supplies.jpg'
+                    img= '/execution/execution-supplies.jpg'
                     alt= 'Imagen de suministro de equipos y personal especializado'
                 />
 

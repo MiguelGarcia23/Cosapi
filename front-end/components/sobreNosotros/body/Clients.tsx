@@ -37,7 +37,7 @@ export const ClientsAboutUs: FC = () => {
 
                 <Box>
                     <Image 
-                        src='/logo-pdvsa.png'
+                        src='/aboutUs/logo-pdvsa.png'
                         alt='Logo de PDVSA'
                         width={ 230 }
                         height={ 100 }
@@ -46,7 +46,7 @@ export const ClientsAboutUs: FC = () => {
 
                 <Box>
                     <Image 
-                        src='/logo-venequip.png'
+                        src='/aboutUs/logo-venequip.png'
                         alt='Logo de Venequip'
                         width={ 230 }
                         height={ 100 }
@@ -55,7 +55,7 @@ export const ClientsAboutUs: FC = () => {
 
                 <Box>
                     <Image 
-                        src='/logo-repsol.png'
+                        src='/aboutUs/logo-repsol.png'
                         alt='Logo de Repsol'
                         width={ 230 }
                         height={ 100 }
@@ -64,7 +64,7 @@ export const ClientsAboutUs: FC = () => {
 
                 <Box>
                     <Image 
-                        src='/logo-vepica.png'
+                        src='/aboutUs/logo-vepica.png'
                         alt='Logo de Vepica'
                         width={ 230 }
                         height={ 100 }

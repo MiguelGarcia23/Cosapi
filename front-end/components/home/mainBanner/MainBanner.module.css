@@ -1,7 +1,7 @@
 /* Banner principal */
 .main-banner {
     height: 50vh;
-    background-image: url('/main-banner.png');
+    background-image: url('/banners/main-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

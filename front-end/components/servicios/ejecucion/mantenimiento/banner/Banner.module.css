@@ -1,7 +1,7 @@
 /* Banner principal */
 .maintenance-banner {
     height: 50vh;
-    background-image: url('/maintenance-banner.png');
+    background-image: url('/banners/maintenance-banner.png');
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;

@@ -26,7 +26,7 @@ export const MachinesDiagnostic: FC = () => {
 
             <Box className={ styles['diagnostic-machines-img']}>
                 <Image 
-                    src='/diagnostic-machines.png'
+                    src='/diagnostic/diagnostic-machines.png'
                     alt='Imagen de evaluación de maquinaria'
                     layout='fill'
                 />

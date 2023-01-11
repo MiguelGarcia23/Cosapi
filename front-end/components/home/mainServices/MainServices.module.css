@@ -1,7 +1,7 @@
 /* Contenedor nuestros servicios populares */
 .main-services {
     padding: 2.5rem 3.75rem;
-    background-image: url('/bg-main-services.png');
+    background-image: url('/home/bg-main-services.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -32,7 +32,7 @@ export const IntroAboutUs: FC = () => {
             <Box className={ styles['about-us-intro-img'] }>
 
                 <Image 
-                    src='/icon-logo.svg'
+                    src='/aboutUs/icon-logo.svg'
                     alt='Logo de Cosapi'
                     width={ 155 }
                     height={ 200 }
