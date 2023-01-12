@@ -1,7 +1,7 @@
 /* Banner principal */
 .contact-banner {
     height: 50vh;
-    background-image: url('/banners/diagnostic-banner.png');
+    background-image: url('/banners/contact-banner.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
